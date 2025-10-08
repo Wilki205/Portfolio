@@ -821,3 +821,46 @@ body {
     padding: 1rem;
   }
 }
+
+@media (max-width: 450px) {
+  .portfolio-page-container,
+  .skills-container,
+  .about-user-card,
+  .top-info-bar,
+  .project-card,
+  .section-title,
+  .glowing-card-wrapper {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: unset;
+    margin: 1vw auto;
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .skills-grid,
+  .soft-skills-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .project-info,
+  .about-user-card,
+  .section-title {
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+  }
+
+  .project-card .project-image-container {
+    height: 90px !important;
+  }
+
+  .footer-content,
+  .project-links {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+}
