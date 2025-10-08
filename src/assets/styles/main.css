@@ -864,3 +864,93 @@ body {
     gap: 15px !important;
   }
 }
+
+/* ===================== */
+/* AJUSTE DE RESPONSIVIDADE OTIMIZADO */
+/* ===================== */
+@media (max-width: 480px) {
+  .portfolio-page-container,
+  .skills-container,
+  .about-user-card,
+  .top-info-bar,
+  .project-card,
+  .section-title,
+  .glowing-card-wrapper {
+    max-width: 99vw;
+    width: 99vw;
+    min-width: unset;
+    margin: 2vw auto;
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    border-radius: 12px !important;
+  }
+
+  .skills-container, .glowing-card-wrapper {
+    padding-left: 2vw !important; 
+    padding-right: 2vw !important;
+  }
+
+  .section-title {
+    font-size: 1.35rem !important;
+    margin-bottom: 16px !important;
+    margin-top: 10px !important;
+  }
+
+  .skills-grid,
+  .soft-skills-grid,
+  .software-skills-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .about-user-card,
+  .education-section,
+  .organization-section,
+  .contact-form-card {
+    padding: 1.1rem !important;
+  }
+
+  .project-card .project-image-container {
+    height: 85px !important;
+    max-height: 24vw !important;
+    min-height: 60px !important;
+  }
+
+  .carousel-container {
+    max-width: 99vw !important;
+    padding-bottom: 0.7rem !important;
+  }
+
+  .project-info {
+    padding: 0.9rem !important;
+  }
+
+  .footer-content,
+  .project-links {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 13px !important;
+  }
+}
+
+/* Pequenos ajustes extra para aparelhos abaixo de 400px de largura */
+@media (max-width: 400px) {
+  .skills-container, .glowing-card-wrapper, .about-user-card, .contact-form-card {
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+  }
+
+  .section-title {
+    font-size: 1.12rem !important;
+  }
+
+  .project-card {
+    min-width: unset !important;
+  }
+
+  .skills-grid, .soft-skills-grid, .software-skills-grid {
+    gap: 7px !important;
+  }
+}
