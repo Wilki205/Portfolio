@@ -157,7 +157,7 @@ body {
 .profile-picture {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* << Nova linha */
+  object-fit: cover; /* << Nova linha */
 }
 .profile-info h2 {
   font-size: 2rem;
@@ -837,8 +837,9 @@ body {
   /* Perfil Central */
   .profile-picture-wrapper {
     /* Diminui o tamanho da foto de perfil */
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
   }
   
   .age-card {
