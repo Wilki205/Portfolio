@@ -340,6 +340,7 @@ body {
   flex: 0 0 630px;
   max-width: 630px;
   min-width: 320px;
+  margin-right: 0; 
 }
 .project-card:hover {
   transform: translateY(-7px);
@@ -450,10 +451,11 @@ body {
 }
 .carousel-track {
   display: flex;
-  gap: 2rem;
+  gap: 0rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
 }
 .carousel-track::-webkit-scrollbar {
   display: none;
@@ -863,7 +865,8 @@ body {
 
   /* --- 4. Carrossel de Projetos --- */
   .carousel-container {
-    max-width: 100%; /* Permite que o carrossel ocupe toda a largura */
+    max-width: 98vw;
+    min-width: 98vw; /* Permite que o carrossel ocupe toda a largura */
   }
   
   .carousel-track {
@@ -875,8 +878,8 @@ body {
   .project-card {
     /* O card agora será flexível e ocupará 90% da tela */
     flex: 0 0 90%; 
-    max-width: 90%;
-    min-width: 0; /* Reseta o min-width para permitir que diminua */
+    max-width: 98vw;
+    min-width: 98vw;/* Reseta o min-width para permitir que diminua */
   }
 
   .project-links {
