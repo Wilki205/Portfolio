@@ -157,7 +157,7 @@ body {
 .profile-picture {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* CORREÇÃO: Garante que a foto não seja cortada */
+  object-fit: contain; /* << Nova linha */
 }
 .profile-info h2 {
   font-size: 2rem;
@@ -784,118 +784,184 @@ body {
 }
 
 /* ==========================================================================
-   8. ESTILOS RESPONSIVOS (TELAS MENORES)
+   8. MODO RESPONSIVO - IPHONE X / TELAS PEQUENAS
    ========================================================================== */
-@media screen and (max-width: 480px) {
+@media (max-width: 768px) {
 
-  /* CORREÇÃO: Impede a barra de rolagem horizontal na página inteira */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* --- 1. Layout Principal e Espaçamento --- */
+  /* Layout principal em coluna */
   .main-grid-layout {
-    /* Transforma o grid de 3 colunas em 1 coluna única */
     grid-template-columns: 1fr;
-    gap: 1.5rem; /* Reduz o espaçamento entre os cards */
+    gap: 1.5rem;
+    align-items: stretch;
   }
 
+  .left-column, .center-column, .right-column {
+    gap: 1.5rem;
+  }
+
+  /* Reduz margens e paddings globais */
   .portfolio-page-container {
-    margin: 1rem auto; /* Reduz margem geral da página */
-    padding: 0 0.8rem; /* Reduz o espaçamento lateral */
-  }
-  
-  .full-width-section {
-    margin-top: 2rem; /* Reduz a margem superior da seção de projetos */
+    margin: 1rem auto;
+    padding: 0 0.8rem;
   }
 
-  /* --- 2. Fontes e Títulos --- */
-  .section-title, .portfolio-title {
-    font-size: 1.8rem; /* Diminui o tamanho dos títulos principais */
+  /* Ajuste de tamanhos de texto */
+  .section-title,
+  .portfolio-title {
+    font-size: 1.6rem;
   }
 
   .profile-info h2 {
-    font-size: 1.6rem; /* Diminui o nome do perfil */
-  }
-  
-  .skill-category-title {
-    font-size: 1.5rem; /* Diminui o título das categorias de skills */
-  }
-  
-  .project-info h3 {
-    font-size: 1.4rem; /* Diminui o título dos projetos */
+    font-size: 1.6rem;
   }
 
-  .project-info p {
-    font-size: 1rem; /* Ajusta o texto do projeto */
+  .profile-info p {
+    font-size: 1rem;
   }
 
-  /* --- 3. Componentes Específicos --- */
-  
-  /* Barra de Informações */
-  .top-info-bar {
-    flex-direction: column; /* Empilha os itens da barra de info */
-    gap: 0.5rem;
-    text-align: center;
-  }
-  
-  /* Perfil Central */
+  /* Foto de perfil menor */
   .profile-picture-wrapper {
-    /* Diminui o tamanho da foto de perfil */
-    width: 140px;
-    height: 140px;
-  }
-  
-  .age-card {
-    /* Remove o posicionamento absoluto para evitar quebra de layout */
-    position: static; 
-    /* Centraliza o card de idade abaixo do nome */
-    margin: 1rem auto 0 auto; 
-    width: fit-content;
+    width: 130px;
+    height: 130px;
   }
 
-  /* Habilidades Interpessoais */
+  /* Card de idade reposicionado */
+  .age-card {
+    top: 10px;
+    right: 10px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .age-card span {
+    font-size: 1.1rem;
+  }
+
+  /* Cards ajustados */
+  .about-user-card,
+  .education-section,
+  .organization-section,
+  .software-skills-section,
+  .video-card-section,
+  .project-card,
+  .contact-form-card {
+    padding: 1rem;
+  }
+
+  /* Grid de habilidades interpessoais */
   .soft-skills-grid {
-    /* Altera o grid de 3 colunas para 2, para caber melhor */
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Habilidades Técnicas (já é responsivo, apenas um ajuste) */
+  /* Habilidades técnicas */
   .software-skills-grid {
-    gap: 1.5rem; /* Reduz um pouco o espaçamento entre os ícones */
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 1rem;
   }
 
-  /* --- 4. Carrossel de Projetos --- */
-  .carousel-container {
-    max-width: 100%; /* Permite que o carrossel ocupe toda a largura */
-    overflow-x: hidden; /* CORREÇÃO: Impede que o conteúdo do carrossel vaze */
+  .skill-icon {
+    min-width: 70px;
+    min-height: 85px;
   }
-  
+
+  /* Projeto (carrossel e cards) */
+  .carousel-container {
+    padding-bottom: 1rem;
+  }
+
   .carousel-track {
-    /* Adiciona padding nas laterais para que o card não cole nas bordas */
-    padding: 0 1rem;
-    gap: 1rem; /* Diminui o espaço entre os cards */
+    gap: 1rem;
   }
 
   .project-card {
-    /* O card agora será flexível e ocupará 90% da tela */
-    flex: 0 0 90%; 
-    max-width: 90%;
-    min-width: 0; /* Reseta o min-width para permitir que diminua */
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .project-info {
+    padding: 1.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-info p {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   .project-links {
-    /* Coloca os botões um abaixo do outro se não couberem lado a lado */
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    gap: 0.8rem;
   }
 
-  /* --- 5. Rodapé --- */
+  .project-link {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+
+  /* Formulário de contato */
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Footer */
   .footer-content {
-    /* Empilha os elementos do rodapé verticalmente */
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
+  }
+
+  .back-to-top-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  /* Ajuste de elementos longos */
+  .card-text-content,
+  .education-list-content {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Telas bem pequenas (iPhone SE, Galaxy S) */
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  .section-title,
+  .portfolio-title {
+    font-size: 1.4rem;
+  }
+
+  .profile-picture-wrapper {
+    width: 110px;
+    height: 110px;
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .project-link {
+    font-size: 0.95rem;
+  }
+
+  .top-info-bar {
+    flex-direction: column;
+    gap: 0.5rem;
     text-align: center;
   }
 }
