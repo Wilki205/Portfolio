@@ -527,14 +527,22 @@ body {
   border-radius: 16px;
   padding: 3px; /* espessura da borda */
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 33%, #34e89e 66%, #fffb00 100%);
+  
+  /* Versões padrão + WebKit */
+  mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+
   mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
   pointer-events: none;
   z-index: 1;
 }
+
 
 .skills-container > * {
   position: relative;
@@ -744,14 +752,22 @@ body {
   border-radius: 10px;
   padding: 2px;
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 33%, #34e89e 66%, #fffb00 100%);
+  
+  /* Adiciona versão padrão + prefixada */
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+
   mask-composite: exclude;
+  -webkit-mask-composite: xor;
+
   pointer-events: none;
   z-index: 1;
 }
+
 
 .gradient-border-container > * {
   position: relative;
@@ -767,382 +783,113 @@ body {
   z-index: 1;
 }
 
-
-
 /* ==========================================================================
-   7. RESPONSIVIDADE - MELHORADA
+   8. ESTILOS RESPONSIVOS (TELAS MENORES)
    ========================================================================== */
-@media (max-width: 992px) {
-  .main-grid-layout {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-  .center-profile-area {
-    order: -1;
-    margin-bottom: 2rem;
-  }
-  .age-card {
-    position: static;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-}
+@media screen and (max-width: 480px) {
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 1.5rem;
+  /* --- 1. Layout Principal e Espaçamento --- */
+  .main-grid-layout {
+    /* Transforma o grid de 3 colunas em 1 coluna única */
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Reduz o espaçamento entre os cards */
+  }
+
+  .portfolio-page-container {
+    margin: 1rem auto; /* Reduz margem geral da página */
+    padding: 0 0.8rem; /* Reduz o espaçamento lateral */
+  }
+  
+  .full-width-section {
+    margin-top: 2rem; /* Reduz a margem superior da seção de projetos */
+  }
+
+  /* --- 2. Fontes e Títulos --- */
+  .section-title, .portfolio-title {
+    font-size: 1.8rem; /* Diminui o tamanho dos títulos principais */
+  }
+
+  .profile-info h2 {
+    font-size: 1.6rem; /* Diminui o nome do perfil */
+  }
+  
+  .skill-category-title {
+    font-size: 1.5rem; /* Diminui o título das categorias de skills */
+  }
+  
+  .project-info h3 {
+    font-size: 1.4rem; /* Diminui o título dos projetos */
+  }
+
+  .project-info p {
+    font-size: 1rem; /* Ajusta o texto do projeto */
+  }
+
+  /* --- 3. Componentes Específicos --- */
+  
+  /* Barra de Informações */
+  .top-info-bar {
+    flex-direction: column; /* Empilha os itens da barra de info */
+    gap: 0.5rem;
     text-align: center;
   }
-  .project-links {
-    flex-direction: column;
+  
+  /* Perfil Central */
+  .profile-picture-wrapper {
+    /* Diminui o tamanho da foto de perfil */
+    width: 140px;
+    height: 140px;
   }
-  .project-card .project-image-container {
-    height: 170px;
-  }
-  .projects-grid {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .top-info-bar {
-    flex-direction: column;
-    gap: 0.7rem;
-  }
-  .project-card .project-image-container {
-    height: 120px;
-  }
-  .projects-grid {
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  .project-info {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 450px) {
-  .portfolio-page-container,
-  .skills-container,
-  .about-user-card,
-  .top-info-bar,
-  .project-card,
-  .section-title,
-  .glowing-card-wrapper {
-    width: 98vw;
-    max-width: 98vw;
-    min-width: unset;
-    margin: 1vw auto;
-    padding-left: 1vw !important;
-    padding-right: 1vw !important;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  
+  .age-card {
+    /* Remove o posicionamento absoluto para evitar quebra de layout */
+    position: static; 
+    /* Centraliza o card de idade abaixo do nome */
+    margin: 1rem auto 0 auto; 
+    width: fit-content;
   }
 
-  .skills-grid,
+  /* Habilidades Interpessoais */
   .soft-skills-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
+    /* Altera o grid de 3 colunas para 2, para caber melhor */
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .project-info,
-  .about-user-card,
-  .section-title {
-    padding-left: 2vw !important;
-    padding-right: 2vw !important;
-  }
-
-  .project-card .project-image-container {
-    height: 90px !important;
-  }
-
-  .footer-content,
-  .project-links {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 15px !important;
-  }
-}
-
-/* ==========================================================================
-   7. RESPONSIVIDADE - OTIMIZADA PARA MOBILE
-   ========================================================================== */
-
-/* Tablets e telas médias */
-@media (max-width: 992px) {
-  .main-grid-layout {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-  .center-profile-area {
-    order: -1;
-    margin-bottom: 2rem;
-  }
-  .age-card {
-    position: static;
-    display: inline-block;
-    margin-top: 1rem;
-  }
-}
-
-/* Layout intermediário (tablets menores) */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  .project-links {
-    flex-direction: column;
-  }
-  .project-card .project-image-container {
-    height: 180px;
-  }
-  .projects-grid {
-    gap: 1.5rem;
-  }
-}
-
-/* Smartphones médios */
-@media (max-width: 480px) {
-  .top-info-bar {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .portfolio-page-container,
-  .skills-container,
-  .about-user-card,
-  .top-info-bar,
-  .project-card,
-  .section-title,
-  .glowing-card-wrapper,
-  .contact-form-card {
-    width: 95vw;
-    max-width: 95vw;
-    margin: 0 auto 1.2rem auto;
-    padding: 1rem !important;
-    border-radius: 14px !important;
-    box-sizing: border-box;
-  }
-
-  .section-title {
-    font-size: 1.4rem !important;
-    margin-bottom: 12px !important;
-    text-align: center !important;
-  }
-
-  .skills-grid,
-  .soft-skills-grid,
+  /* Habilidades Técnicas (já é responsivo, apenas um ajuste) */
   .software-skills-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
+    gap: 1.5rem; /* Reduz um pouco o espaçamento entre os ícones */
   }
 
-  .project-card .project-image-container {
-    height: 110px !important;
-    border-radius: 10px !important;
-  }
-
-  .project-info {
-    padding: 0.9rem !important;
-    text-align: center !important;
-  }
-
+  /* --- 4. Carrossel de Projetos --- */
   .carousel-container {
-    max-width: 95vw !important;
-    padding-bottom: 1rem !important;
+    max-width: 100%; /* Permite que o carrossel ocupe toda a largura */
+  }
+  
+  .carousel-track {
+    /* Adiciona padding nas laterais para que o card não cole nas bordas */
+    padding: 0 1rem;
+    gap: 1rem; /* Diminui o espaço entre os cards */
   }
 
-  .footer-content,
+  .project-card {
+    /* O card agora será flexível e ocupará 90% da tela */
+    flex: 0 0 90%; 
+    max-width: 90%;
+    min-width: 0; /* Reseta o min-width para permitir que diminua */
+  }
+
   .project-links {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 14px !important;
+    /* Coloca os botões um abaixo do outro se não couberem lado a lado */
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 
-  .contact-form-card input,
-  .contact-form-card textarea {
-    font-size: 1rem;
-    padding: 0.9rem !important;
-  }
-
-  button, .btn {
-    width: 100%;
-    font-size: 1rem !important;
-  }
-}
-
-/* Telas muito pequenas (ex: iPhone SE, Galaxy Fold) */
-@media (max-width: 400px) {
-  .section-title {
-    font-size: 1.15rem !important;
-  }
-
-  .skills-grid,
-  .soft-skills-grid,
-  .software-skills-grid {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-
-  .project-card .project-image-container {
-    height: 90px !important;
-  }
-
+  /* --- 5. Rodapé --- */
   .footer-content {
-    gap: 10px !important;
-  }
-}
-
-/* ========================= */
-/* AJUSTE ESPECÍFICO iPHONE X */
-/* ========================= */
-@media (max-width: 390px) {
-  html, body {
-    overflow-x: hidden !important;
-    width: 100% !important;
-  }
-
-  .portfolio-page-container {
-    padding: 0 2vw !important;
-    max-width: 100vw !important;
-  }
-
-  .main-grid-layout {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-    align-items: start !important;
-  }
-
-  .center-profile-area {
-    margin-top: 1.2rem !important;
-  }
-
-  .project-card {
-    min-width: unset !important;
-    width: 96vw !important;
-    max-width: 96vw !important;
-    margin: 1rem auto !important;
-  }
-
-  .project-card .project-image-container {
-    height: auto !important;
-    min-height: 70px !important;
-    max-height: 30vw !important;
-  }
-
-  .project-info {
-    padding: 0.8rem 1rem !important;
-  }
-
-  .skills-grid,
-  .soft-skills-grid,
-  .software-skills-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 8px !important;
-  }
-
-  .section-title {
-    font-size: 1.15rem !important;
-    margin-top: 0.8rem !important;
-  }
-
-  .footer-content {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-align: center !important;
-  }
-
-  .top-info-bar {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    text-align: center !important;
-  }
-
-  .glowing-card-wrapper,
-  .skills-container,
-  .about-user-card {
-    border-radius: 10px !important;
-    margin: 0.6rem auto !important;
-    padding: 1rem !important;
-  }
-}
-/* ========================= */
-/* AJUSTE ESPECÍFICO iPHONE X */
-/* ========================= */
-@media (max-width: 390px) {
-  html, body {
-    overflow-x: hidden !important;
-    width: 100% !important;
-  }
-
-  .portfolio-page-container {
-    padding: 0 2vw !important;
-    max-width: 100vw !important;
-  }
-
-  .main-grid-layout {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-    align-items: start !important;
-  }
-
-  .center-profile-area {
-    margin-top: 1.2rem !important;
-  }
-
-  .project-card {
-    min-width: unset !important;
-    width: 96vw !important;
-    max-width: 96vw !important;
-    margin: 1rem auto !important;
-  }
-
-  .project-card .project-image-container {
-    height: auto !important;
-    min-height: 70px !important;
-    max-height: 30vw !important;
-  }
-
-  .project-info {
-    padding: 0.8rem 1rem !important;
-  }
-
-  .skills-grid,
-  .soft-skills-grid,
-  .software-skills-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 8px !important;
-  }
-
-  .section-title {
-    font-size: 1.15rem !important;
-    margin-top: 0.8rem !important;
-  }
-
-  .footer-content {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    text-align: center !important;
-  }
-
-  .top-info-bar {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    text-align: center !important;
-  }
-
-  .glowing-card-wrapper,
-  .skills-container,
-  .about-user-card {
-    border-radius: 10px !important;
-    margin: 0.6rem auto !important;
-    padding: 1rem !important;
+    /* Empilha os elementos do rodapé verticalmente */
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 }
