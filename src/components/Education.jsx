@@ -1,7 +1,7 @@
 function Education() {
   return (
-    <div className="glowing-card-wrapper color-purple">
-      <section className="education-section" data-aos="fade-up" aria-label="Educação">
+    <div className="glowing-card-wrapper color-purple" data-aos="fade-up">
+      <section className="education-section" aria-label="Educação">
         <h3 className="section-title education-title">Educação</h3>
 
         <div className="education-list-content">

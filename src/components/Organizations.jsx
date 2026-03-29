@@ -1,12 +1,11 @@
 function Organizations() {
   return (
-    <div className="glowing-card-wrapper color-blue">
-      <section
-        className="organization-section"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        aria-label="Experiência"
-      >
+    <div
+      className="glowing-card-wrapper color-blue"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <section className="organization-section" aria-label="Experiência">
         <h3 className="section-title organization-title">Experiência</h3>
 
         <div className="organization-list-content">

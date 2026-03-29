@@ -4,10 +4,9 @@ function VideoCard() {
   const videoFileName = 'apresentacao.mp4';
 
   return (
-    <div className="glowing-card-wrapper color-green">
+    <div className="glowing-card-wrapper color-green" data-aos="fade-up">
       <section
         className="about-user-card video-card-section"
-        data-aos="fade-up"
         aria-label="Vídeo de apresentação"
       >
         <header className="card-header">

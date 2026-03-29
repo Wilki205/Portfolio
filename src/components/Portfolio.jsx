@@ -25,7 +25,7 @@ const projectsData = [
     description:
       'Aplicação front-end para uma loja de e-books, com interface moderna, vídeo de fundo e navegação entre seções usando Vue.js e Tailwind CSS.',
     tags: ['Vue.js', 'Tailwind CSS'],
-    aosDelay: '200',
+    aosDelay: '150',
     demoUrl: 'https://wilki205.github.io/meu-novo-ebookstore/',
     repoUrl: 'https://github.com/Wilki205/meu-novo-ebookstore',
   },
@@ -36,7 +36,7 @@ const projectsData = [
     description:
       'Sistema web voltado à gestão pedagógica, centralizando acompanhamento de turmas, alunos, frequência e atividades em uma interface prática.',
     tags: ['Java', 'Spring Boot', 'Thymeleaf'],
-    aosDelay: '400',
+    aosDelay: '300',
     demoUrl: null,
     repoUrl: 'https://github.com/Wilki205/controle-alunos',
   },
@@ -44,6 +44,7 @@ const projectsData = [
 
 function Portfolio() {
   const trackRef = useRef(null);
+  const intervalRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
   const scrollToProject = (index) => {
@@ -77,13 +78,26 @@ function Portfolio() {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const nextIndex = current === projectsData.length - 1 ? 0 : current + 1;
-      scrollToProject(nextIndex);
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => {
+        const next = prev === projectsData.length - 1 ? 0 : prev + 1;
+
+        if (trackRef.current) {
+          const card = trackRef.current.children[next];
+          if (card) {
+            trackRef.current.scrollTo({
+              left: card.offsetLeft,
+              behavior: 'smooth',
+            });
+          }
+        }
+
+        return next;
+      });
     }, 5000);
 
-    return () => clearInterval(interval);
-  }, [current]);
+    return () => clearInterval(intervalRef.current);
+  }, []);
 
   return (
     <section className="portfolio-section" aria-label="Portfólio">
@@ -96,7 +110,7 @@ function Portfolio() {
         usuário e construção de aplicações funcionais.
       </p>
 
-      <div className="carousel-container">
+      <div className="carousel-container" data-aos="fade-up">
         <button
           className="carousel-btn prev"
           onClick={goToPrevious}

@@ -11,15 +11,14 @@ function Contact() {
       </p>
 
       <div className="contact-form-full">
-        <div className="glowing-card-wrapper">
+        <div className="glowing-card-wrapper" data-aos="fade-up">
           <form
             className="contact-form-card"
-            data-aos="fade-up"
             tabIndex="0"
             action="https://formspree.io/f/xblzknwv"
             method="POST"
           >
-            <i className="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope" aria-hidden="true"></i>
 
             <input type="text" name="nome" placeholder="Seu nome" required />
             <input type="email" name="email" placeholder="Seu e-mail" required />
@@ -39,7 +38,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
           </a>
 
           <a
@@ -49,7 +48,7 @@ function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github" aria-hidden="true"></i>
           </a>
 
           <a
@@ -57,7 +56,7 @@ function Contact() {
             className="circle-icon email"
             aria-label="E-mail"
           >
-            <i className="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
       </div>

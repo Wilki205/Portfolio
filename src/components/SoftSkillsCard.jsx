@@ -30,11 +30,13 @@ const softSkillsData = [
 
 function SoftSkillsCard() {
   return (
-    <div className="glowing-card-wrapper color-orange">
+    <div
+      className="glowing-card-wrapper color-orange"
+      data-aos="fade-right"
+      data-aos-delay="200"
+    >
       <section
         className="about-user-card"
-        data-aos="fade-right"
-        data-aos-delay="200"
         aria-label="Competências comportamentais"
       >
         <header className="card-header">
