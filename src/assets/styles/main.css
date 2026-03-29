@@ -665,42 +665,17 @@ textarea {
 }
 
 .skills-container {
-  position: relative;
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  background: transparent;
-  margin-top: 1rem;
-  z-index: 1;
   width: 100%;
-}
-
-.skills-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  padding: 3px;
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 33%, #34e89e 66%, #fffb00 100%);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.skills-container::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border-radius: 13px;
+  padding: 2rem 1.5rem;
   background: var(--card-background-solid);
-  z-index: 1;
-}
-
-.skills-container > * {
+  border-radius: 16px;
   position: relative;
   z-index: 2;
+}
+
+.skills-container::before,
+.skills-container::after {
+  display: none;
 }
 
 .skills-grid {
@@ -714,6 +689,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.7rem;
   padding: 0.95rem;
   border-radius: 12px;
@@ -723,7 +699,6 @@ textarea {
   cursor: pointer;
   min-width: 90px;
   min-height: 104px;
-  justify-content: center;
 }
 
 .skill-icon:hover {
