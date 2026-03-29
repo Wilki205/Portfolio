@@ -33,7 +33,7 @@ function Skills() {
         back-end, banco de dados e computação em nuvem.
       </p>
 
-      <div className="glowing-card-wrapper" data-aos="fade-up">
+      <div className="skills-frame" data-aos="fade-up">
         <div className="skills-container">
           <div className="skills-grid">
             {skillsData.map((skill) => (
