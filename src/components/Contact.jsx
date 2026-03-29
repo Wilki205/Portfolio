@@ -1,12 +1,16 @@
-// src/components/Contact.jsx
-
 function Contact() {
   return (
     <section className="contact-section" aria-label="Contato">
-      <h3 className="section-title contact-title" data-aos="fade-up">Contato</h3>
-      <div className="contact-form-full">
+      <h3 className="section-title contact-title" data-aos="fade-up">
+        Contato
+      </h3>
 
-        {/* Adicionamos o "embrulho" do efeito de brilho aqui */}
+      <p className="contact-description" data-aos="fade-up">
+        Estou disponível para oportunidades, projetos e conexões na área de tecnologia.
+        Envie uma mensagem ou fale comigo pelas redes abaixo.
+      </p>
+
+      <div className="contact-form-full">
         <div className="glowing-card-wrapper">
           <form
             className="contact-form-card"
@@ -16,10 +20,14 @@ function Contact() {
             method="POST"
           >
             <i className="fa-solid fa-envelope"></i>
+
             <input type="text" name="nome" placeholder="Seu nome" required />
             <input type="email" name="email" placeholder="Seu e-mail" required />
             <textarea name="mensagem" placeholder="Sua mensagem" required />
-            <button type="submit" className="email-send-btn">Enviar</button>
+
+            <button type="submit" className="email-send-btn">
+              Enviar mensagem
+            </button>
           </form>
         </div>
 
@@ -33,6 +41,7 @@ function Contact() {
           >
             <i className="fa-brands fa-linkedin"></i>
           </a>
+
           <a
             href="https://github.com/Wilki205"
             className="circle-icon github"
@@ -42,17 +51,15 @@ function Contact() {
           >
             <i className="fa-brands fa-github"></i>
           </a>
+
           <a
-            href="https://instagram.com/programadordepadaria"
-            className="circle-icon instagram"
-            aria-label="Instagram"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:seuemail@exemplo.com"
+            className="circle-icon email"
+            aria-label="E-mail"
           >
-            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-solid fa-envelope"></i>
           </a>
         </div>
-
       </div>
     </section>
   );

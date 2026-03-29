@@ -1,6 +1,7 @@
 // src/components/Portfolio.jsx
 import React, { useRef, useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
+
 import proj1Img from '../assets/img/Captura de tela 2025-06-01 175549.png';
 import proj2Img from '../assets/img/Captura de tela 2025-06-01 235338.png';
 import proj3Img from '../assets/img/img.png';
@@ -8,70 +9,106 @@ import proj3Img from '../assets/img/img.png';
 const projectsData = [
   {
     imageSrc: proj1Img,
-    alt: "Projeto 1",
-    title: "HouseTech",
-    description: "Este é o site institucional da HouseTech, um projeto criado para apresentar os serviços de suporte e manutenção de computadores em Recife e região. O objetivo é oferecer aos clientes uma plataforma clara, profissional e de fácil acesso para solicitar orçamentos e conhecer nosso trabalho.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    aosDelay: "0",
-    demoUrl: "https://wilki205.github.io/HouseTech/",
-    repoUrl: "https://github.com/Wilki205/HouseTech.git"
+    alt: 'Preview do projeto HouseTech',
+    title: 'HouseTech',
+    description:
+      'Site institucional desenvolvido para apresentar serviços de suporte e manutenção de computadores, com foco em clareza, responsividade e conversão.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    aosDelay: '0',
+    demoUrl: 'https://wilki205.github.io/HouseTech/',
+    repoUrl: 'https://github.com/Wilki205/HouseTech',
   },
   {
     imageSrc: proj2Img,
-    alt: "Projeto 2",
-    title: "Meu E-book Store",
-    description: "Projeto de frontend para uma loja de e-books desenvolvido com Vue.js e estilizado com Tailwind CSS. A aplicação apresenta uma interface moderna com um vídeo de fundo dinâmico e navegação entre diferentes seções da loja.",
-    tags: ["Vue.js", "Tailwind CSS"],
-    aosDelay: "200",
-    demoUrl: "https://wilki205.github.io/meu-novo-ebookstore/",
-    repoUrl: "https://github.com/Wilki205/meu-novo-ebookstore.git"
+    alt: 'Preview do projeto Meu E-book Store',
+    title: 'Meu E-book Store',
+    description:
+      'Aplicação front-end para uma loja de e-books, com interface moderna, vídeo de fundo e navegação entre seções usando Vue.js e Tailwind CSS.',
+    tags: ['Vue.js', 'Tailwind CSS'],
+    aosDelay: '200',
+    demoUrl: 'https://wilki205.github.io/meu-novo-ebookstore/',
+    repoUrl: 'https://github.com/Wilki205/meu-novo-ebookstore',
   },
   {
     imageSrc: proj3Img,
-    alt: "Projeto 3",
-    title: "Painel de Gestão",
-    description: "Painel de Gestão de Curso Um sistema web completo para gestão pedagógica, desenvolvido para tutores e analistas educacionais. A plataforma centraliza o acompanhamento de turmas, alunos, frequência, atividades e diários de aula em uma interface intuitiva e rica em informações.",
-    tags: ["Java", "Springboot", "Thymeleaf"],
-    aosDelay: "200",
-    demoUrl: "#",
-    repoUrl: "https://github.com/Wilki205/controle-alunos.git"
-  }
+    alt: 'Preview do projeto Painel de Gestão',
+    title: 'Painel de Gestão',
+    description:
+      'Sistema web voltado à gestão pedagógica, centralizando acompanhamento de turmas, alunos, frequência e atividades em uma interface prática.',
+    tags: ['Java', 'Spring Boot', 'Thymeleaf'],
+    aosDelay: '400',
+    demoUrl: null,
+    repoUrl: 'https://github.com/Wilki205/controle-alunos',
+  },
 ];
 
 function Portfolio() {
   const trackRef = useRef(null);
   const [current, setCurrent] = useState(0);
 
-  const scrollTo = idx => {
-    setCurrent(idx);
-    if (trackRef.current) {
-      trackRef.current.scrollTo({
-        left: idx * 670,
-        behavior: 'smooth'
-      });
+  const scrollToProject = (index) => {
+    if (!trackRef.current) return;
+
+    const track = trackRef.current;
+    const card = track.children[index];
+
+    if (!card) return;
+
+    setCurrent(index);
+
+    track.scrollTo({
+      left: card.offsetLeft,
+      behavior: 'smooth',
+    });
+  };
+
+  const goToPrevious = () => {
+    if (current > 0) {
+      scrollToProject(current - 1);
+    }
+  };
+
+  const goToNext = () => {
+    if (current < projectsData.length - 1) {
+      scrollToProject(current + 1);
+    } else {
+      scrollToProject(0);
     }
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const next = (current + 1) % projectsData.length;
-      scrollTo(next);
-    }, 4000); // Troca a cada 4 segundos
+      const nextIndex = current === projectsData.length - 1 ? 0 : current + 1;
+      scrollToProject(nextIndex);
+    }, 5000);
+
     return () => clearInterval(interval);
   }, [current]);
 
   return (
     <section className="portfolio-section" aria-label="Portfólio">
-      <h3 className="section-title portfolio-title" data-aos="fade-up">Portfólio</h3>
+      <h3 className="section-title portfolio-title" data-aos="fade-up">
+        Projetos em Destaque
+      </h3>
+
+      <p className="portfolio-description" data-aos="fade-up">
+        Alguns dos projetos que desenvolvi com foco em interface, experiência do
+        usuário e construção de aplicações funcionais.
+      </p>
+
       <div className="carousel-container">
-        <button 
-          className="carousel-btn prev" 
-          onClick={() => scrollTo(Math.max(current - 1, 0))}
+        <button
+          className="carousel-btn prev"
+          onClick={goToPrevious}
           disabled={current === 0}
-        >&#8249;</button>
+          aria-label="Projeto anterior"
+        >
+          &#8249;
+        </button>
+
         <div className="carousel-track" ref={trackRef}>
-          {projectsData.map((project, idx) => (
-            <ProjectCard 
+          {projectsData.map((project) => (
+            <ProjectCard
               key={project.title}
               imageSrc={project.imageSrc}
               alt={project.alt}
@@ -84,13 +121,17 @@ function Portfolio() {
             />
           ))}
         </div>
+
         <button
           className="carousel-btn next"
-          onClick={() => scrollTo(Math.min(current + 1, projectsData.length - 1))}
-          disabled={current === projectsData.length - 1}
-        >&#8250;</button>
+          onClick={goToNext}
+          aria-label="Próximo projeto"
+        >
+          &#8250;
+        </button>
       </div>
     </section>
   );
 }
+
 export default Portfolio;

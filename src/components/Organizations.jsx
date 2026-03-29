@@ -1,24 +1,28 @@
-// src/components/Organizations.jsx
-
 function Organizations() {
   return (
-    // Componente "embrulhado" com a div do efeito
     <div className="glowing-card-wrapper color-blue">
-      <section className="organization-section" data-aos="fade-up" data-aos-delay="200" aria-label="Organizações">
-        <h3 className="section-title organization-title">Organizações</h3>
-        <div className="organization-list-content"> {/* Adicionado para consistência e possível scroll */}
+      <section
+        className="organization-section"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        aria-label="Experiência"
+      >
+        <h3 className="section-title organization-title">Experiência</h3>
+
+        <div className="organization-list-content">
           <div className="organization-item">
             <i className="fa-solid fa-briefcase" aria-hidden="true"></i>
             <div>
-              <h4>Tutor no Projeto Florescendo Talentos</h4>
-              <p>Instrutor de HTML, CSS e JavaScript</p>
+              <h4>Tutor de Programação — Projeto Florescendo Talentos</h4>
+              <p>Orientação em HTML, CSS, JavaScript e desenvolvimento web.</p>
             </div>
           </div>
+
           <div className="organization-item">
-            <i className="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <i className="fa-solid fa-laptop-code" aria-hidden="true"></i>
             <div>
               <h4>Freelancer</h4>
-              <p>Projetos pessoais e acadêmicos</p>
+              <p>Desenvolvimento de projetos web pessoais, acadêmicos e sob demanda.</p>
             </div>
           </div>
         </div>

@@ -6,11 +6,13 @@ function AboutCard() {
           <div className="card-icon"><i className="fa-solid fa-user"></i></div>
           <h3>Sobre Mim</h3>
         </header>
-        
+
         <p className="card-text-content">
-         Minha paixão por tecnologia me guiou por uma jornada que começou no desenvolvimento de aplicações e hoje se aprofunda na infraestrutura que as torna possíveis. Como estudante de Análise e Desenvolvimento de Sistemas, construí uma base robusta como desenvolvedor, atuando do Front-End ao Back-End, o que me ensinou não apenas a criar, mas a entender como a tecnologia realmente funciona.
-          <br/><br/>
-          Essa busca por um conhecimento mais profundo me levou naturalmente para a nuvem. Através do programa AWS re/Start, estou direcionando minha carreira para a Computação em Nuvem e Cibersegurança, com o objetivo de obter a certificação Cloud Practitioner. Paralelamente, tenho a satisfação de contribuir com a comunidade como Tutor no programa Florescendo Talentos da CESAR School, onde ajudo a formar a próxima geração de tecnólogos. Agora, estou pronto para unir minha visão de desenvolvedor com as melhores práticas de Cloud para construir soluções seguras e escaláveis.
+          Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência em desenvolvimento Front-End e Back-End e interesse crescente em Computação em Nuvem e Cibersegurança.
+          <br /><br />
+          Tenho certificação AWS Certified Cloud Practitioner, o que fortalece minha base em serviços de nuvem, arquitetura básica e boas práticas dentro do ecossistema AWS.
+          <br /><br />
+          Também atuo como Tutor no programa Florescendo Talentos, da CESAR School, contribuindo na formação de novos estudantes em tecnologia. Busco unir desenvolvimento, Cloud e segurança para construir soluções modernas, escaláveis e confiáveis.
         </p>
       </section>
     </div>
