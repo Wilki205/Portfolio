@@ -16,18 +16,32 @@ function Profile() {
       </div>
 
       <div className="profile-info" data-aos="fade-up">
-        <h2>Wilkison Bruno</h2>
+        <span className="profile-location">Recife-PE</span>
+        <h1>Wilkison Bruno Barbosa de Souza</h1>
         <p className="profile-role">
-          Desenvolvedor Back-End • Cloud • Segurança de Aplicações
+          Desenvolvedor em formação com foco em Back-End, Dados, Cloud e
+          Segurança da Informação.
+        </p>
+
+        <p className="profile-summary">
+          Estudante de Análise e Desenvolvimento de Sistemas e tutor de
+          programação, com experiência prática em projetos web, automações,
+          bancos de dados e acompanhamento pedagógico. Tenho desenvolvido
+          soluções com React, Node.js, Python, Java, PostgreSQL, Docker,
+          Supabase e AWS, unindo tecnologia, organização e impacto real.
         </p>
 
         <div className="profile-badges">
-          <span>AWS Certified Cloud Practitioner</span>
-          <span>Tutor de Programação</span>
-          <span>Estudante de ADS</span>
+          <span>ADS • conclusão prevista para 2026</span>
+          <span>Tutor de Programação • CESAR School</span>
+          <span>Back-End • Dados • Cloud • Segurança</span>
         </div>
 
         <div className="profile-actions">
+          <a href="#portfolio" className="primary-action">
+            Ver projetos
+          </a>
+
           <a
             href="https://github.com/Wilki205"
             target="_blank"
@@ -43,6 +57,12 @@ function Profile() {
           >
             LinkedIn
           </a>
+
+          <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
+            Currículo
+          </a>
+
+          <a href="#contato">Contato</a>
         </div>
       </div>
     </section>

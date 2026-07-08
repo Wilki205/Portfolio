@@ -1,148 +1,82 @@
-// src/components/Portfolio.jsx
-import React, { useRef, useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
-
-import proj1Img from '../assets/img/Captura de tela 2025-06-01 175549.png';
-import proj2Img from '../assets/img/Captura de tela 2025-06-01 235338.png';
-import proj3Img from '../assets/img/img.png';
 
 const projectsData = [
   {
-    imageSrc: proj1Img,
-    alt: 'Preview do projeto HouseTech',
-    title: 'HouseTech',
+    title: 'Syncro',
+    type: 'Plataforma de gestão educacional',
     description:
-      'Site institucional desenvolvido para apresentar serviços de suporte e manutenção de computadores, com foco em clareza, responsividade e conversão.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    aosDelay: '0',
-    demoUrl: 'https://wilki205.github.io/HouseTech/',
-    repoUrl: 'https://github.com/Wilki205/HouseTech',
+      'Plataforma para acompanhamento de turmas, alunos, entregas, frequência e indicadores de desempenho em tempo real.',
+    stack: [
+      'React',
+      'Vue.js',
+      'Node.js',
+      'Supabase',
+      'PostgreSQL',
+      'Google Classroom API',
+      'Apps Script',
+    ],
+    highlight:
+      'Integra dados educacionais e transforma informações de entregas, presença e desempenho em indicadores visuais para tomada de decisão.',
+    status: 'Em desenvolvimento',
   },
   {
-    imageSrc: proj2Img,
-    alt: 'Preview do projeto Meu E-book Store',
-    title: 'Meu E-book Store',
+    title: 'DentalCare',
+    type: 'Sistema de gestão clínica',
     description:
-      'Aplicação front-end para uma loja de e-books, com interface moderna, vídeo de fundo e navegação entre seções usando Vue.js e Tailwind CSS.',
-    tags: ['Vue.js', 'Tailwind CSS'],
-    aosDelay: '150',
-    demoUrl: 'https://wilki205.github.io/meu-novo-ebookstore/',
-    repoUrl: 'https://github.com/Wilki205/meu-novo-ebookstore',
+      'Sistema para gerenciamento de pacientes, agenda, financeiro, autenticação e dashboard administrativo.',
+    stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
+    highlight:
+      'Aplicação full stack com autenticação, banco de dados relacional, rotas protegidas e painel administrativo.',
+    status: 'Em desenvolvimento',
   },
   {
-    imageSrc: proj3Img,
-    alt: 'Preview do projeto Painel de Gestão',
-    title: 'Painel de Gestão',
+    title: 'Portal Educacional',
+    type: 'Portal web para ensino',
     description:
-      'Sistema web voltado à gestão pedagógica, centralizando acompanhamento de turmas, alunos, frequência e atividades em uma interface prática.',
-    tags: ['Java', 'Spring Boot', 'Thymeleaf'],
-    aosDelay: '300',
-    demoUrl: null,
-    repoUrl: 'https://github.com/Wilki205/controle-alunos',
+      'Portal próprio para gerenciar turmas, conteúdos, atividades, presença e participação dos alunos, com áreas separadas para professor e aluno.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'JWT', 'Docker'],
+    highlight:
+      'Centraliza fluxos educacionais em uma plataforma própria, reduzindo dependência de ferramentas externas.',
+    status: 'Em desenvolvimento',
+  },
+  {
+    title: 'PhysiQ Pro',
+    type: 'Plataforma de avaliação física',
+    description:
+      'Sistema para cadastro de alunos, avaliações físicas, evolução corporal, relatórios, agenda e dashboard para profissionais de educação física.',
+    stack: ['React', 'Node.js', 'API própria', 'PostgreSQL', 'Prisma', 'Docker'],
+    highlight:
+      'Produto com foco em gestão fitness, relatórios visuais e acompanhamento de evolução dos alunos.',
+    status: 'Em desenvolvimento',
+  },
+  {
+    title: 'API de Gestão',
+    type: 'Back-End / API REST',
+    description:
+      'API para autenticação, gestão de usuários, unidades, permissões e controle operacional.',
+    stack: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Prisma', 'Docker'],
+    highlight:
+      'Back-end com autenticação, regras de acesso, endpoints organizados e estrutura preparada para integração com diferentes front-ends.',
+    status: 'Em desenvolvimento',
   },
 ];
 
 function Portfolio() {
-  const trackRef = useRef(null);
-  const intervalRef = useRef(null);
-  const [current, setCurrent] = useState(0);
-
-  const scrollToProject = (index) => {
-    if (!trackRef.current) return;
-
-    const track = trackRef.current;
-    const card = track.children[index];
-
-    if (!card) return;
-
-    setCurrent(index);
-
-    track.scrollTo({
-      left: card.offsetLeft,
-      behavior: 'smooth',
-    });
-  };
-
-  const goToPrevious = () => {
-    if (current > 0) {
-      scrollToProject(current - 1);
-    }
-  };
-
-  const goToNext = () => {
-    if (current < projectsData.length - 1) {
-      scrollToProject(current + 1);
-    } else {
-      scrollToProject(0);
-    }
-  };
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setCurrent((prev) => {
-        const next = prev === projectsData.length - 1 ? 0 : prev + 1;
-
-        if (trackRef.current) {
-          const card = trackRef.current.children[next];
-          if (card) {
-            trackRef.current.scrollTo({
-              left: card.offsetLeft,
-              behavior: 'smooth',
-            });
-          }
-        }
-
-        return next;
-      });
-    }, 5000);
-
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
   return (
-    <section className="portfolio-section" aria-label="Portfólio">
+    <section id="portfolio" className="portfolio-section" aria-label="Portfólio">
       <h3 className="section-title portfolio-title" data-aos="fade-up">
-        Projetos em Destaque
+        Projetos Reais e Atuais
       </h3>
 
       <p className="portfolio-description" data-aos="fade-up">
-        Alguns dos projetos que desenvolvi com foco em interface, experiência do
-        usuário e construção de aplicações funcionais.
+        Sistemas e plataformas com foco em gestão, educação, back-end, dados e
+        automação de processos.
       </p>
 
-      <div className="carousel-container" data-aos="fade-up">
-        <button
-          className="carousel-btn prev"
-          onClick={goToPrevious}
-          disabled={current === 0}
-          aria-label="Projeto anterior"
-        >
-          &#8249;
-        </button>
-
-        <div className="carousel-track" ref={trackRef}>
-          {projectsData.map((project) => (
-            <ProjectCard
-              key={project.title}
-              imageSrc={project.imageSrc}
-              alt={project.alt}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              aosDelay={project.aosDelay}
-              demoUrl={project.demoUrl}
-              repoUrl={project.repoUrl}
-            />
-          ))}
-        </div>
-
-        <button
-          className="carousel-btn next"
-          onClick={goToNext}
-          aria-label="Próximo projeto"
-        >
-          &#8250;
-        </button>
+      <div className="projects-grid" data-aos="fade-up">
+        {projectsData.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
       </div>
     </section>
   );

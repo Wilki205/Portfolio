@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className="contact-section" aria-label="Contato">
+    <section id="contato" className="contact-section" aria-label="Contato">
       <h3 className="section-title contact-title" data-aos="fade-up">
         Contato
       </h3>

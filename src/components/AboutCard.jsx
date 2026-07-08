@@ -10,18 +10,18 @@ function AboutCard() {
         </header>
 
         <p className="card-text-content">
-          Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência em
-          desenvolvimento Front-End e Back-End e interesse crescente em Computação em
-          Nuvem e Cibersegurança.
+          Sou estudante de Análise e Desenvolvimento de Sistemas, com conclusão
+          prevista para 2026, e atuo como Tutor de Programação no Projeto
+          Florescendo Talentos, da CESAR School.
           <br /><br />
-          Tenho certificação AWS Certified Cloud Practitioner, o que fortalece minha
-          base em serviços de nuvem, arquitetura básica e boas práticas dentro do
-          ecossistema AWS.
+          Minha experiência envolve ensino de lógica de programação, Python, HTML,
+          CSS, JavaScript, Google Sheets, Looker Studio e SQL, além do
+          acompanhamento de alunos, atividades, entregas e evolução pedagógica.
           <br /><br />
-          Também atuo como Tutor no programa Florescendo Talentos, da CESAR School,
-          contribuindo na formação de novos estudantes em tecnologia. Busco unir
-          desenvolvimento, Cloud e segurança para construir soluções modernas,
-          escaláveis e confiáveis.
+          Tenho direcionado minha formação e meus projetos para desenvolvimento
+          Back-End, dados, Cloud e Segurança da Informação, buscando construir
+          soluções organizadas, confiáveis e com impacto real para pessoas e
+          negócios.
         </p>
       </section>
     </div>

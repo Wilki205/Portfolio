@@ -1,48 +1,31 @@
 function ProjectCard({
-  imageSrc,
-  alt,
   title,
+  type,
   description,
-  tags,
-  demoUrl,
-  repoUrl,
+  stack,
+  highlight,
+  status,
 }) {
   return (
     <article className="project-card">
-      <div className="project-image-container">
-        <img src={imageSrc} alt={alt} className="project-image" />
-      </div>
-
       <div className="project-info">
+        <span className="project-type">{type}</span>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className="project-description">{description}</p>
+
+        <div className="project-highlight">
+          <strong>Destaque técnico</strong>
+          <p>{highlight}</p>
+        </div>
 
         <div className="tags">
-          {tags.map((tag) => (
-            <span key={tag}>{tag}</span>
+          {stack.map((item) => (
+            <span key={item}>{item}</span>
           ))}
         </div>
 
         <div className="project-links">
-          {demoUrl && demoUrl !== '#' && (
-            <a
-              className="project-link"
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver Projeto <i className="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          )}
-
-          <a
-            className="project-link"
-            href={repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver Código <i className="fa-brands fa-github"></i>
-          </a>
+          <span className="project-link project-status">{status}</span>
         </div>
       </div>
     </article>
