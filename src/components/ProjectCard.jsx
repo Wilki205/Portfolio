@@ -5,9 +5,26 @@ function ProjectCard({
   stack,
   highlight,
   status,
+  imageSrc,
 }) {
+  const initials = title
+    .split(' ')
+    .map((word) => word[0])
+    .join('')
+    .slice(0, 3);
+
   return (
     <article className="project-card">
+      <div className="project-media" aria-hidden="true">
+        {imageSrc ? (
+          <img src={imageSrc} alt="" className="project-image" />
+        ) : (
+          <div className="project-placeholder">
+            <span>{initials}</span>
+          </div>
+        )}
+      </div>
+
       <div className="project-info">
         <span className="project-type">{type}</span>
         <h3>{title}</h3>

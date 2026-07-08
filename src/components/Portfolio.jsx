@@ -17,7 +17,7 @@ const projectsData = [
     ],
     highlight:
       'Integra dados educacionais e transforma informações de entregas, presença e desempenho em indicadores visuais para tomada de decisão.',
-    status: 'Em desenvolvimento',
+    status: 'Em desenvolvimento contínuo',
   },
   {
     title: 'DentalCare',
@@ -27,7 +27,7 @@ const projectsData = [
     stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
     highlight:
       'Aplicação full stack com autenticação, banco de dados relacional, rotas protegidas e painel administrativo.',
-    status: 'Em desenvolvimento',
+    status: 'Em desenvolvimento contínuo',
   },
   {
     title: 'Portal Educacional',
@@ -37,7 +37,7 @@ const projectsData = [
     stack: ['React', 'Node.js', 'PostgreSQL', 'JWT', 'Docker'],
     highlight:
       'Centraliza fluxos educacionais em uma plataforma própria, reduzindo dependência de ferramentas externas.',
-    status: 'Em desenvolvimento',
+    status: 'Em desenvolvimento contínuo',
   },
   {
     title: 'PhysiQ Pro',
@@ -47,7 +47,7 @@ const projectsData = [
     stack: ['React', 'Node.js', 'API própria', 'PostgreSQL', 'Prisma', 'Docker'],
     highlight:
       'Produto com foco em gestão fitness, relatórios visuais e acompanhamento de evolução dos alunos.',
-    status: 'Em desenvolvimento',
+    status: 'Em desenvolvimento contínuo',
   },
   {
     title: 'API de Gestão',
@@ -57,7 +57,7 @@ const projectsData = [
     stack: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Prisma', 'Docker'],
     highlight:
       'Back-end com autenticação, regras de acesso, endpoints organizados e estrutura preparada para integração com diferentes front-ends.',
-    status: 'Em desenvolvimento',
+    status: 'Em desenvolvimento contínuo',
   },
 ];
 
