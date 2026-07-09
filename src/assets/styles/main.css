@@ -137,36 +137,23 @@ textarea {
 }
 
 /* ==========================================================================
-   4. EFEITO DE BRILHO
+   4. BORDAS DOS CARDS
    ========================================================================== */
 .glowing-card-wrapper {
   position: relative;
-  padding: 2px;
+  padding: 1px;
   border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: transparent;
   overflow: hidden;
   width: 100%;
   height: auto;
+  transition: border-color var(--transition-default);
   will-change: transform, opacity;
 }
 
 .glowing-card-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 180%;
-  height: 180%;
-  background: conic-gradient(
-    from 0deg,
-    #ff5733,
-    #db2777,
-    #6d28d9,
-    #2563eb,
-    #16a34a,
-    #facc15,
-    #ff5733
-  );
-  animation: rotate-glow 5s linear infinite;
+  display: none;
 }
 
 .glowing-card-wrapper > * {
@@ -178,24 +165,8 @@ textarea {
   background-color: var(--card-background-solid);
 }
 
-.glowing-card-wrapper.color-green::before {
-  filter: hue-rotate(90deg);
-}
-
-.glowing-card-wrapper.color-red::before {
-  filter: hue-rotate(180deg);
-}
-
-.glowing-card-wrapper.color-purple::before {
-  filter: hue-rotate(270deg);
-}
-
-.glowing-card-wrapper.color-blue::before {
-  filter: hue-rotate(0deg);
-}
-
-.glowing-card-wrapper.color-orange::before {
-  filter: hue-rotate(220deg);
+.glowing-card-wrapper:hover {
+  border-color: rgba(59, 130, 246, 0.45);
 }
 
 .static-card-wrapper {
@@ -215,16 +186,6 @@ textarea {
 
 .static-card-wrapper:hover {
   border-color: rgba(59, 130, 246, 0.45);
-}
-
-@keyframes rotate-glow {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
 }
 
 /* ==========================================================================
@@ -807,9 +768,15 @@ textarea {
 
 .skills-frame {
   width: 100%;
-  padding: 2px;
+  padding: 1px;
   border-radius: 18px;
-  background: linear-gradient(90deg, #6d28d9, #2563eb, #16a34a, #facc15);
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  transition: border-color var(--transition-default);
+}
+
+.skills-frame:hover {
+  border-color: rgba(59, 130, 246, 0.45);
 }
 
 .skills-container {
@@ -847,7 +814,7 @@ textarea {
 .skill-icon:hover {
   transform: translateY(-4px) scale(1.03);
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(59, 130, 246, 0.45);
 }
 
 .skill-icon i {
@@ -1036,47 +1003,7 @@ textarea {
 }
 
 /* ==========================================================================
-   15. BORDA EM GRADIENTE
-   ========================================================================== */
-.gradient-border-container {
-  position: relative;
-  border-radius: 10px;
-  overflow: visible;
-  background: transparent;
-  z-index: 1;
-}
-
-.gradient-border-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  padding: 2px;
-  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 33%, #34e89e 66%, #fffb00 100%);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.gradient-border-container::after {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  border-radius: 8px;
-  background: var(--card-background-solid);
-  z-index: 1;
-}
-
-.gradient-border-container > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* ==========================================================================
-   16. RESPONSIVIDADE
+   15. RESPONSIVIDADE
    ========================================================================== */
 @media screen and (max-width: 1024px) {
   .main-grid-layout {
