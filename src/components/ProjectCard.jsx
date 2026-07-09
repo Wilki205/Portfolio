@@ -8,6 +8,8 @@ function ProjectCard({
   highlight,
   status,
   imageSrc,
+  liveUrl,
+  liveLabel = 'Acessar projeto',
 }) {
   const [imageFailed, setImageFailed] = useState(false);
   const hasImage = imageSrc && !imageFailed;
@@ -47,6 +49,17 @@ function ProjectCard({
 
         <div className="project-links">
           <span className="project-link project-status">{status}</span>
+          {liveUrl && (
+            <a
+              href={liveUrl}
+              className="project-link project-live-link"
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${liveLabel} ${title} em nova aba`}
+            >
+              {liveLabel}
+            </a>
+          )}
         </div>
       </div>
     </article>

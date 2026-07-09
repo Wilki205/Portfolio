@@ -96,6 +96,7 @@ textarea {
 .education-section,
 .organization-section,
 .video-card-section,
+.online-projects-card,
 .project-card,
 .contact-form-card {
   background-color: var(--card-background-solid);
@@ -472,18 +473,67 @@ textarea {
 }
 
 /* ==========================================================================
-   10. VÍDEO
+   10. PROJETOS ONLINE
    ========================================================================== */
-.video-local-container {
-  margin-top: 1rem;
+.online-projects-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-top: 0.9rem;
 }
 
-.portfolio-video,
-.video-local-container video {
-  width: 100%;
+.online-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.online-projects-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: var(--secondary-text);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.online-projects-list i {
+  color: #86efac;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
+}
+
+.online-projects-stack {
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.online-projects-stack strong {
   display: block;
-  border-radius: 16px;
-  object-fit: cover;
+  color: #fff;
+  font-size: 0.92rem;
+  margin-bottom: 0.7rem;
+}
+
+.online-projects-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem;
+}
+
+.online-projects-tags span {
+  padding: 0.32rem 0.62rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(134, 239, 172, 0.16);
+  color: #d7fbe3;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -673,6 +723,9 @@ textarea {
 }
 
 .project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.78rem 1rem;
   border-radius: 10px;
   text-align: center;
@@ -683,6 +736,28 @@ textarea {
   background: rgba(59, 130, 246, 0.12);
   width: 100%;
   margin-top: auto;
+}
+
+.project-live-link {
+  color: #f8fbff;
+  text-decoration: none;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(14, 165, 233, 0.72));
+  border-color: rgba(147, 197, 253, 0.38);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.18);
+  transition: transform var(--transition-default), border-color var(--transition-default), box-shadow var(--transition-default), filter var(--transition-default);
+}
+
+.project-live-link:hover,
+.project-live-link:focus-visible {
+  border-color: rgba(191, 219, 254, 0.72);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.24);
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.project-live-link:focus-visible {
+  outline: 2px solid rgba(191, 219, 254, 0.9);
+  outline-offset: 3px;
 }
 
 /* ==========================================================================
@@ -1067,6 +1142,7 @@ textarea {
   .education-section,
   .organization-section,
   .video-card-section,
+  .online-projects-card,
   .contact-form-card {
     padding: 1.15rem;
   }
