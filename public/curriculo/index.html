@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo | Wilkison Bruno</title>
+    <meta
+      name="description"
+      content="Currículo de Wilkison Bruno Barbosa de Souza, desenvolvedor em formação com foco em Back-End, Dados, Cloud e Segurança da Informação."
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg-soft: #111827;
+        --card: #161b22;
+        --text: #f5f7fa;
+        --muted: #b8c0cc;
+        --accent: #3b82f6;
+        --accent-hover: #2563eb;
+        --border: rgba(148, 163, 184, 0.18);
+        --border-hover: rgba(59, 130, 246, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 48px;
+      }
+
+      .topbar,
+      .hero,
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+      }
+
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 18px;
+        margin-bottom: 24px;
+      }
+
+      .brand {
+        font-weight: 800;
+      }
+
+      .topbar span {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .hero {
+        padding: clamp(24px, 4vw, 44px);
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        max-width: 820px;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        line-height: 1.05;
+        margin-bottom: 14px;
+      }
+
+      .title {
+        color: #dbeafe;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .summary {
+        max-width: 860px;
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 11px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.045);
+        color: #eef4ff;
+        font-weight: 800;
+        transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        border-color: var(--border-hover);
+        background: rgba(59, 130, 246, 0.12);
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      .button.primary:hover,
+      .button.primary:focus-visible {
+        background: var(--accent-hover);
+        border-color: var(--accent-hover);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 20px;
+        align-items: start;
+      }
+
+      .card {
+        padding: 22px;
+        transition: border-color 0.25s ease;
+      }
+
+      .card:hover {
+        border-color: var(--border-hover);
+      }
+
+      .card h2 {
+        font-size: 1.25rem;
+        margin-bottom: 14px;
+      }
+
+      .item + .item {
+        margin-top: 18px;
+      }
+
+      .item h3 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+
+      .item p,
+      .item li {
+        color: var(--muted);
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+
+      .project-link {
+        display: inline-block;
+        margin-top: 6px;
+        color: #93c5fd;
+        font-weight: 700;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tags span {
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.24);
+        color: #dbeafe;
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .full {
+        grid-column: 1 / -1;
+      }
+
+      @media (max-width: 820px) {
+        .page {
+          width: min(100% - 24px, 1120px);
+          padding-top: 18px;
+        }
+
+        .topbar,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="topbar" aria-label="Navegação do currículo">
+        <strong class="brand">Wilkison Bruno</strong>
+        <span>Recife-PE</span>
+      </nav>
+
+      <section class="hero" aria-labelledby="curriculo-title">
+        <h1 id="curriculo-title">Wilkison Bruno Barbosa de Souza</h1>
+        <p class="title">
+          Desenvolvedor em formação | Back-End, Dados, Cloud e Segurança da Informação
+        </p>
+        <p class="summary">
+          Estudante de Análise e Desenvolvimento de Sistemas, com conclusão prevista
+          para 2026, e Tutor de Programação no Projeto Florescendo Talentos - CESAR
+          School. Tenho experiência prática com desenvolvimento web, automações,
+          bancos de dados, dashboards e acompanhamento pedagógico. Desenvolvo soluções
+          com React, Node.js, Python, Java, PostgreSQL, Docker, Supabase e AWS,
+          buscando unir tecnologia, organização e impacto real.
+        </p>
+
+        <div class="actions" aria-label="Ações principais">
+          <a class="button primary" href="/curriculo/wilkison-bruno-curriculo.pdf" download>
+            Baixar currículo em PDF
+          </a>
+          <a class="button" href="/">Voltar ao portfólio</a>
+          <a class="button" href="https://github.com/Wilki205" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/wilkisonb"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a class="button" href="/#contato">E-mail</a>
+          <a class="button" href="/#portfolio">
+            Projetos
+          </a>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="card" aria-labelledby="formacao-title">
+          <h2 id="formacao-title">Formação</h2>
+          <div class="item">
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>
+              Faculdade Católica Imaculada Conceição do Recife — Em andamento,
+              conclusão prevista para 2026
+            </p>
+          </div>
+          <div class="item">
+            <h3>CDD 4.0 - Formação em Back-End</h3>
+            <p>Instituto Aliança em parceria com a Universidade Federal do Ceará</p>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="tecnologias-title">
+          <h2 id="tecnologias-title">Tecnologias</h2>
+          <div class="tags">
+            <span>React</span><span>Vue.js</span><span>JavaScript</span>
+            <span>TypeScript</span><span>HTML</span><span>CSS</span>
+            <span>Node.js</span><span>Express</span><span>Python</span>
+            <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span>
+            <span>MySQL</span><span>MongoDB</span><span>Supabase</span>
+            <span>SQL</span><span>Docker</span><span>AWS</span><span>Git</span>
+            <span>GitHub</span><span>JWT</span><span>Redis</span>
+            <span>Google Classroom API</span><span>Apps Script</span>
+            <span>Looker Studio</span>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="experiencia-title">
+          <h2 id="experiencia-title">Experiência</h2>
+          <div class="item">
+            <h3>Tutor de Programação — Projeto Florescendo Talentos - CESAR School</h3>
+            <ul>
+              <li>Orientação em lógica de programação, HTML, CSS, JavaScript e Python</li>
+              <li>Apoio no acompanhamento de turmas, atividades, entregas e frequência</li>
+              <li>Uso de ferramentas de dados como Google Sheets, Looker Studio, SQL e dashboards</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Freelancer</h3>
+            <ul>
+              <li>Desenvolvimento de projetos web pessoais, acadêmicos e sob demanda</li>
+              <li>Criação de sistemas, dashboards, automações e APIs</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="links-title">
+          <h2 id="links-title">Links</h2>
+          <div class="item">
+            <h3>GitHub</h3>
+            <a class="project-link" href="https://github.com/Wilki205" target="_blank" rel="noreferrer">
+              github.com/Wilki205
+            </a>
+          </div>
+          <div class="item">
+            <h3>Portfólio</h3>
+            <a class="project-link" href="https://portfolio-99xi.vercel.app/" target="_blank" rel="noreferrer">
+              portfolio-99xi.vercel.app
+            </a>
+          </div>
+          <div class="item">
+            <h3>Projetos</h3>
+            <a class="project-link" href="https://portfolio-99xi.vercel.app/#portfolio">
+              Ver projetos publicados
+            </a>
+          </div>
+        </section>
+
+        <section class="card full" aria-labelledby="projetos-title">
+          <h2 id="projetos-title">Projetos principais</h2>
+          <div class="grid">
+            <article class="item">
+              <h3>Syncro</h3>
+              <p>
+                Plataforma de gestão educacional para acompanhamento de turmas,
+                alunos, entregas, frequência e indicadores.
+              </p>
+              <a class="project-link" href="https://syncro.forged-apps.com/" target="_blank" rel="noreferrer">
+                syncro.forged-apps.com
+              </a>
+            </article>
+            <article class="item">
+              <h3>DentalCare</h3>
+              <p>Sistema de gestão clínica com pacientes, agenda, financeiro, autenticação e dashboard.</p>
+              <a
+                class="project-link"
+                href="https://agenda.appdentalcare.com/login"
+                target="_blank"
+                rel="noreferrer"
+              >
+                agenda.appdentalcare.com/login
+              </a>
+            </article>
+            <article class="item">
+              <h3>Portal Educacional</h3>
+              <p>Portal web para ensino, turmas, conteúdos, atividades e participação de alunos.</p>
+              <a class="project-link" href="https://portal.forged-apps.com/" target="_blank" rel="noreferrer">
+                portal.forged-apps.com
+              </a>
+            </article>
+            <article class="item">
+              <h3>PhysiQ Pro</h3>
+              <p>Sistema para avaliação física, cadastro de alunos, relatórios e acompanhamento de evolução.</p>
+              <a class="project-link" href="https://physiq.forged-apps.com/" target="_blank" rel="noreferrer">
+                physiq.forged-apps.com
+              </a>
+            </article>
+            <article class="item">
+              <h3>Monitor / API de Gestão</h3>
+              <p>Painel e API para gestão, monitoramento e indicadores.</p>
+              <a class="project-link" href="https://monitor.forged-apps.com/" target="_blank" rel="noreferrer">
+                monitor.forged-apps.com
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

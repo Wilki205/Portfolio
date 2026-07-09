@@ -58,7 +58,7 @@ function Profile() {
             LinkedIn
           </a>
 
-          <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/curriculo/" target="_blank" rel="noopener noreferrer">
             Currículo
           </a>
 
