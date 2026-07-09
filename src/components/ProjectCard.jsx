@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function ProjectCard({
   title,
   type,
@@ -7,20 +9,22 @@ function ProjectCard({
   status,
   imageSrc,
 }) {
-  const initials = title
-    .split(' ')
-    .map((word) => word[0])
-    .join('')
-    .slice(0, 3);
+  const [imageFailed, setImageFailed] = useState(false);
+  const hasImage = imageSrc && !imageFailed;
 
   return (
     <article className="project-card">
       <div className="project-media" aria-hidden="true">
-        {imageSrc ? (
-          <img src={imageSrc} alt="" className="project-image" />
+        {hasImage ? (
+          <img
+            src={imageSrc}
+            alt=""
+            className="project-image"
+            onError={() => setImageFailed(true)}
+          />
         ) : (
           <div className="project-placeholder">
-            <span>{initials}</span>
+            <span>{title}</span>
           </div>
         )}
       </div>

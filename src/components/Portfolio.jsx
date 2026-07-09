@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 const projectsData = [
   {
     title: 'Syncro',
+    imageSrc: '/projects/Syncro.png',
     type: 'Plataforma de gestão educacional',
     description:
       'Plataforma para acompanhamento de turmas, alunos, entregas, frequência e indicadores de desempenho em tempo real.',
@@ -21,6 +22,7 @@ const projectsData = [
   },
   {
     title: 'DentalCare',
+    imageSrc: '/projects/dentalcare.png',
     type: 'Sistema de gestão clínica',
     description:
       'Sistema para gerenciamento de pacientes, agenda, financeiro, autenticação e dashboard administrativo.',
@@ -31,6 +33,7 @@ const projectsData = [
   },
   {
     title: 'Portal Educacional',
+    imageSrc: '/projects/portal-educacional.png',
     type: 'Portal web para ensino',
     description:
       'Portal próprio para gerenciar turmas, conteúdos, atividades, presença e participação dos alunos, com áreas separadas para professor e aluno.',
@@ -41,6 +44,7 @@ const projectsData = [
   },
   {
     title: 'PhysiQ Pro',
+    imageSrc: '/projects/physiq-pro.png',
     type: 'Plataforma de avaliação física',
     description:
       'Sistema para cadastro de alunos, avaliações físicas, evolução corporal, relatórios, agenda e dashboard para profissionais de educação física.',
@@ -51,6 +55,7 @@ const projectsData = [
   },
   {
     title: 'API de Gestão',
+    imageSrc: '/projects/api-gestao.png',
     type: 'Back-End / API REST',
     description:
       'API para autenticação, gestão de usuários, unidades, permissões e controle operacional.',
