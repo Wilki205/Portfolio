@@ -31,7 +31,7 @@ const softSkillsData = [
 function SoftSkillsCard() {
   return (
     <div
-      className="glowing-card-wrapper color-orange"
+      className="glowing-card-wrapper static-card-wrapper color-orange"
       data-aos="fade-right"
       data-aos-delay="200"
     >

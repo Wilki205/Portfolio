@@ -1,7 +1,7 @@
 function Organizations() {
   return (
     <div
-      className="glowing-card-wrapper color-blue"
+      className="glowing-card-wrapper static-card-wrapper color-blue"
       data-aos="fade-up"
       data-aos-delay="200"
     >

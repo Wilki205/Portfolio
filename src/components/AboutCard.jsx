@@ -1,6 +1,6 @@
 function AboutCard() {
   return (
-    <div className="glowing-card-wrapper" data-aos="fade-right">
+    <div className="glowing-card-wrapper static-card-wrapper" data-aos="fade-right">
       <section className="about-user-card">
         <header className="card-header">
           <div className="card-icon">

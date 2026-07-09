@@ -8,7 +8,7 @@ function VideoCard() {
   const stack = ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Supabase'];
 
   return (
-    <div className="glowing-card-wrapper color-green" data-aos="fade-up">
+    <div className="glowing-card-wrapper static-card-wrapper color-green" data-aos="fade-up">
       <section
         className="about-user-card online-projects-card"
         aria-label="Projetos online"
