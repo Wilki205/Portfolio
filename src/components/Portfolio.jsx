@@ -80,12 +80,12 @@ function Portfolio() {
   return (
     <section id="portfolio" className="portfolio-section" aria-label="Portfólio">
       <h3 className="section-title portfolio-title" data-aos="fade-up">
-        Projetos Reais e Atuais
+        Projetos
       </h3>
 
       <p className="portfolio-description" data-aos="fade-up">
-        Sistemas e plataformas com foco em gestão, educação, back-end, dados e
-        automação de processos.
+        Sistemas e plataformas desenvolvidos para gestão, educação, saúde e
+        automação.
       </p>
 
       <div className="projects-grid" data-aos="fade-up">
