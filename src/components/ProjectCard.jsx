@@ -1,69 +1,69 @@
-import { useState } from 'react';
-
-function ProjectCard({
+import { useState } from "react";
+import Icon from "./Icon";
+export default function ProjectCard({
   title,
   type,
   description,
   stack,
-  highlight,
-  status,
-  imageSrc,
-  liveUrl,
-  liveLabel = 'Acessar projeto',
+  focus,
+  image,
+  repository,
+  index,
 }) {
   const [imageFailed, setImageFailed] = useState(false);
-  const hasImage = imageSrc && !imageFailed;
-
   return (
     <article className="project-card">
-      <div className="project-media" aria-hidden="true">
-        {hasImage ? (
+      <div className="project-media">
+        <div className="project-browser" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span className="browser-label">{title}</span>
+          <Icon name="code" size={14} />
+        </div>
+        {imageFailed ? (
+          <div className="project-placeholder">{title}</div>
+        ) : (
           <img
-            src={imageSrc}
-            alt=""
-            className="project-image"
+            src={`${import.meta.env.BASE_URL}projects/${image}`}
+            alt={`Página de apresentação do ${title}`}
+            width="1918"
+            height="1030"
+            loading="lazy"
+            decoding="async"
             onError={() => setImageFailed(true)}
           />
-        ) : (
-          <div className="project-placeholder">
-            <span>{title}</span>
-          </div>
         )}
       </div>
-
       <div className="project-info">
-        <span className="project-type">{type}</span>
+        <div className="project-category">
+          <span>{type}</span>
+          <span>0{index + 1}</span>
+        </div>
         <h3>{title}</h3>
-        <p className="project-description">{description}</p>
-
-        <div className="project-highlight">
-          <strong>Destaque técnico</strong>
-          <p>{highlight}</p>
-        </div>
-
-        <div className="tags">
+        <p>{description}</p>
+        <details>
+          <summary>Sobre a implementação</summary>
+          <p>{focus}</p>
+        </details>
+        <ul className="tags" aria-label="Tecnologias">
           {stack.map((item) => (
-            <span key={item}>{item}</span>
+            <li key={item}>{item}</li>
           ))}
-        </div>
-
-        <div className="project-links">
-          <span className="project-link project-status">{status}</span>
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              className="project-link project-live-link"
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${liveLabel} ${title} em nova aba`}
-            >
-              {liveLabel}
-            </a>
-          )}
-        </div>
+        </ul>
+        <a
+          className="project-source"
+          href={repository}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <Icon name="github" size={17} /> Explorar código
+          </span>
+          <Icon size={19} />
+          <span className="sr-only"> de {title} (nova aba)</span>
+        </a>
       </div>
     </article>
   );
 }
-
-export default ProjectCard;
