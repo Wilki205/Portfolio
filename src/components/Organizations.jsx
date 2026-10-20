@@ -1,33 +1,57 @@
-function Organizations() {
+import SectionHeading from "./SectionHeading";
+export default function Organizations() {
   return (
-    <div
-      className="glowing-card-wrapper static-card-wrapper color-blue"
-      data-aos="fade-up"
-      data-aos-delay="200"
-    >
-      <section className="organization-section" aria-label="Experiência">
-        <h3 className="section-title organization-title">Experiência</h3>
-
-        <div className="organization-list-content">
-          <div className="organization-item">
-            <i className="fa-solid fa-briefcase" aria-hidden="true"></i>
-            <div>
-              <h4>Tutor de Programação — Projeto Florescendo Talentos</h4>
-              <p>Orientação em HTML, CSS, JavaScript e desenvolvimento web.</p>
+    <section id="experiencia" className="section">
+      <SectionHeading
+        number="02"
+        label="Trajetória"
+        title="Experiência que conecta."
+      />
+      <div className="experience-list">
+        <article className="experience-card">
+          <div className="company-logo pad">
+            P<span>+</span>
+          </div>
+          <div className="experience-body">
+            <div className="experience-top">
+              <span className="company-name">PAD Saúde</span>
+              <span className="current-badge">Atual</span>
+            </div>
+            <h3>Desenvolvedor Full Stack</h3>
+            <p>
+              Atuação no desenvolvimento de software, conectando interfaces e
+              serviços web no contexto da saúde.
+            </p>
+            <div className="tags">
+              <span>Desenvolvimento Full Stack</span>
+              <span>Saúde & tecnologia</span>
             </div>
           </div>
-
-          <div className="organization-item">
-            <i className="fa-solid fa-laptop-code" aria-hidden="true"></i>
-            <div>
-              <h4>Freelancer</h4>
-              <p>Desenvolvimento de projetos web pessoais, acadêmicos e sob demanda.</p>
+          <p className="experience-date">
+            <time dateTime="2026-08">Ago. 2026</time> — presente
+          </p>
+        </article>
+        <article className="experience-card">
+          <div className="company-logo cesar">
+            c<span>.</span>
+          </div>
+          <div className="experience-body">
+            <span className="company-name">CESAR School</span>
+            <h3>Tutor de Programação</h3>
+            <p>
+              Projeto Florescendo Talentos. Orientação em lógica de programação
+              e desenvolvimento web, com acompanhamento de atividades e do
+              aprendizado dos alunos.
+            </p>
+            <div className="tags">
+              <span>Educação</span>
+              <span>Programação</span>
+              <span>Mentoria</span>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+          <p className="experience-date">Experiência anterior</p>
+        </article>
+      </div>
+    </section>
   );
 }
-
-export default Organizations;

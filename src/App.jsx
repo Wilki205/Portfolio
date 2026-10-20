@@ -1,55 +1,38 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import TopInfoBar from './components/TopInfoBar';
-import AboutCard from './components/AboutCard';
-import SoftSkillsCard from './components/SoftSkillsCard';
-import Profile from './components/Profile';
-import Education from './components/Education';
-import Organizations from './components/Organizations';
-import Portfolio from './components/Portfolio';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import VideoCard from './components/VideoCard';
-import Footer from './components/Footer';
-
-function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      once: true,
-      offset: 80,
-    });
-  }, []);
-
+import TopInfoBar from "./components/TopInfoBar";
+import Profile from "./components/Profile";
+import AboutCard from "./components/AboutCard";
+import Organizations from "./components/Organizations";
+import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+export default function App() {
   return (
-    <div className="portfolio-page-container">
+    <>
+      <a className="skip-link" href="#conteudo">
+        Pular para o conteúdo
+      </a>
       <TopInfoBar />
-
-      <div className="main-grid-layout">
-        <div className="left-column">
-          <AboutCard />
-          <SoftSkillsCard />
+      <main id="conteudo" tabIndex={-1} className="page-container">
+        <Profile />
+        <div className="tech-strip" aria-label="Stack principal">
+          <span>DO FRONT AO BACK.</span>
+          <p>
+            React <i>✦</i> TypeScript <i>✦</i> Node.js <i>✦</i> PostgreSQL{" "}
+            <i>✦</i> Docker <i>✦</i> AWS
+          </p>
         </div>
-
-        <div className="center-column">
-          <Profile />
-          <VideoCard />
-        </div>
-
-        <div className="right-column">
-          <Education />
-          <Organizations />
-        </div>
+        <AboutCard />
+        <Organizations />
+        <Portfolio />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <div className="page-container">
+        <Footer />
       </div>
-
-      <Portfolio />
-      <Skills />
-      <Contact />
-      <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;
