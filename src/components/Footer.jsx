@@ -1,16 +1,35 @@
-export default function Footer() {
+function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <footer className="site-footer">
-      <a className="wordmark" href="#inicio">
-        <span className="brand-mark">
-          w<span>.</span>
-        </span>
-        <span>Wilkison Bruno</span>
-      </a>
-      <p>© {new Date().getFullYear()} · Feito com atenção aos detalhes.</p>
-      <a className="back-top" href="#inicio">
-        Voltar ao topo <span aria-hidden="true">↑</span>
-      </a>
+    <footer className="portfolio-footer">
+      <div className="footer-content">
+        <div className="footer-spacer"></div>
+
+        <div className="footer-info">
+          <p className="footer-text">
+            © {new Date().getFullYear()} Wilkison Bruno
+          </p>
+          <span className="footer-subtext">
+            Desenvolvedor • Cloud • AWS Certified Cloud Practitioner
+          </span>
+        </div>
+
+        <button
+          onClick={scrollToTop}
+          className="back-to-top-btn"
+          aria-label="Voltar ao topo"
+        >
+          Topo <i className="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
     </footer>
   );
 }
+
+export default Footer;

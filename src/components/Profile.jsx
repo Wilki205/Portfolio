@@ -1,132 +1,72 @@
-import Icon from "./Icon";
-import { social } from "../data/portfolio";
-export default function Profile() {
+import profileImage from '../assets/img/will.png';
+
+function Profile() {
   return (
-    <section id="inicio" className="hero" aria-labelledby="hero-title">
-      <div className="hero-copy">
-        <p className="status-label">
-          <span className="status-dot" /> Desenvolvedor Full Stack · PAD Saúde
-        </p>
-        <p className="hero-greeting">Olá, eu sou Wilkison Bruno</p>
-        <h1 id="hero-title">
-          Código com propósito.
-          <br />
-          <span>
-            Soluções de ponta
-            <br className="desktop-break" /> a ponta.
-          </span>
-        </h1>
-        <p className="hero-description">
-          Conecto interfaces, APIs e infraestrutura para construir soluções web.
-          Full Stack com atenção aos detalhes e curiosidade pelo que acontece
-          por trás da tela.
-        </p>
-        <div className="hero-actions">
-          <a className="button primary" href="#portfolio">
-            Explorar projetos <Icon name="right" size={18} />
-          </a>
-          <a className="button secondary" href="#contato">
-            Entrar em contato <Icon name="mail" size={18} />
-          </a>
-        </div>
-        <div className="hero-social">
-          <a href={social.github} target="_blank" rel="noopener noreferrer">
-            <Icon name="github" size={18} /> GitHub <Icon size={13} />
-          </a>
-          <a href={social.linkedin} target="_blank" rel="noopener noreferrer">
-            <Icon name="linkedin" size={18} /> LinkedIn <Icon size={13} />
-          </a>
-          <a href={`${import.meta.env.BASE_URL}curriculo/`}>
-            Currículo <Icon size={13} />
-          </a>
-          <span>Recife, PE · Brasil</span>
-        </div>
-      </div>
+    <section className="center-profile-area" aria-label="Perfil">
       <div
-        className="hero-visual"
-        role="img"
-        aria-label="Especialidades: frontend, backend e cloud"
+        className="glowing-card-wrapper profile-picture-wrapper"
+        data-aos="zoom-in"
+        tabIndex="0"
       >
-        <div className="visual-grid" />
-        <div className="visual-orbit orbit-one" />
-        <div className="visual-orbit orbit-two" />
-        <span className="visual-cross cross-one">+</span>
-        <span className="visual-cross cross-two">+</span>
-        <div className="code-window">
-          <div className="window-bar">
-            <div className="window-dots">
-              <i />
-              <i />
-              <i />
-            </div>
-            <span>developer.ts</span>
-            <Icon name="code" size={16} />
-          </div>
-          <div className="code-content">
-            <div>
-              <span className="line-number">01</span>
-              <span className="syntax-purple">const</span> developer = {"{"}
-            </div>
-            <div>
-              <span className="line-number">02</span> name:{" "}
-              <span className="syntax-green">'Wilkison Bruno'</span>,
-            </div>
-            <div>
-              <span className="line-number">03</span> role:{" "}
-              <span className="syntax-green">'Full Stack Developer'</span>,
-            </div>
-            <div>
-              <span className="line-number">04</span> stack: [
-            </div>
-            <div>
-              <span className="line-number">05</span>{" "}
-              <span className="syntax-green">'React', 'TypeScript'</span>,
-            </div>
-            <div>
-              <span className="line-number">06</span>{" "}
-              <span className="syntax-green">'Node.js', 'PostgreSQL'</span>
-            </div>
-            <div>
-              <span className="line-number">07</span> ],
-            </div>
-            <div>
-              <span className="line-number">08</span> mindset:{" "}
-              <span className="syntax-green">'Sempre evoluindo'</span>
-            </div>
-            <div>
-              <span className="line-number">09</span>
-              {"};"}
-            </div>
-          </div>
-          <div className="window-footer">
-            <span>
-              <span className="status-dot" /> building with purpose
-            </span>
-            <span>TypeScript</span>
-          </div>
-        </div>
-        <div className="floating-label frontend-label">
-          <span>⌁</span> Frontend{" "}
-          <span className="small-muted">+ experiência</span>
-        </div>
-        <div className="floating-label backend-label">
-          <span>{"{ }"}</span> Backend{" "}
-          <span className="small-muted">+ arquitetura</span>
-        </div>
-        <div className="cloud-label">
-          <span className="cloud-symbol">☁</span>
-          <span>
-            AWS Certified<small>Cloud Practitioner</small>
-          </span>
-          <span className="verified-mark">✓</span>
-        </div>
-        <span className="visual-caption">
-          INTERFACE → LÓGICA → INFRAESTRUTURA
-        </span>
+        <img
+          src={profileImage}
+          alt="Foto de perfil de Wilkison Bruno"
+          className="profile-picture"
+        />
       </div>
-      <a className="scroll-cue" href="#sobre">
-        <span>↓</span> Conheça minha trajetória
-      </a>
+
+      <div className="profile-info" data-aos="fade-up">
+        <span className="profile-location">Recife-PE</span>
+        <h1>Wilkison Bruno Barbosa de Souza</h1>
+        <p className="profile-role">
+          Desenvolvedor em formação com foco em Back-End, Dados, Cloud e
+          Segurança da Informação.
+        </p>
+
+        <p className="profile-summary">
+          Estudante de Análise e Desenvolvimento de Sistemas e tutor de
+          programação, com experiência prática em projetos web, automações,
+          bancos de dados e acompanhamento pedagógico. Tenho desenvolvido
+          soluções com React, Node.js, Python, Java, PostgreSQL, Docker,
+          Supabase e AWS, unindo tecnologia, organização e impacto real.
+        </p>
+
+        <div className="profile-badges">
+          <span>ADS • conclusão prevista para 2026</span>
+          <span>Tutor de Programação • CESAR School</span>
+          <span>Back-End • Dados • Cloud • Segurança</span>
+        </div>
+
+        <div className="profile-actions">
+          <a href="#portfolio" className="primary-action">
+            Ver projetos
+          </a>
+
+          <a
+            href="https://github.com/Wilki205"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/wilkisonb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href="/curriculo/" target="_blank" rel="noopener noreferrer">
+            Currículo
+          </a>
+
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
     </section>
   );
 }
+
+export default Profile;
