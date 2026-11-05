@@ -19,22 +19,25 @@ function Profile() {
         <span className="profile-location">Recife-PE</span>
         <h1>Wilkison Bruno Barbosa de Souza</h1>
         <p className="profile-role">
-          Desenvolvedor em formação com foco em Back-End, Dados, Cloud e
-          Segurança da Informação.
+          Desenvolvedor Full Stack Júnior | Back-End • Cloud • Segurança
         </p>
 
         <p className="profile-summary">
-          Estudante de Análise e Desenvolvimento de Sistemas e tutor de
-          programação, com experiência prática em projetos web, automações,
-          bancos de dados e acompanhamento pedagógico. Tenho desenvolvido
-          soluções com React, Node.js, Python, Java, PostgreSQL, Docker,
-          Supabase e AWS, unindo tecnologia, organização e impacto real.
+          Sou desenvolvedor de software com experiência prática na construção e
+          manutenção de aplicações web, APIs REST, integrações e bancos de dados.
+          Atualmente atuo como Desenvolvedor Júnior na PAD Saúde, participando do
+          desenvolvimento e evolução de soluções corporativas. Tenho experiência
+          com React, Next.js, Node.js, TypeScript, Python, PostgreSQL e Docker,
+          além de conhecimentos em infraestrutura, computação em nuvem e segurança
+          de aplicações. Busco desenvolver soluções eficientes, seguras e
+          sustentáveis, combinando boas práticas de engenharia de software com
+          necessidades reais de negócio.
         </p>
 
         <div className="profile-badges">
-          <span>ADS • conclusão prevista para 2026</span>
-          <span>Tutor de Programação • CESAR School</span>
-          <span>Back-End • Dados • Cloud • Segurança</span>
+          <span>ADS • Conclusão prevista para 2027</span>
+          <span>Desenvolvedor Júnior • PAD Saúde</span>
+          <span>Back-End • Cloud • Segurança</span>
         </div>
 
         <div className="profile-actions">

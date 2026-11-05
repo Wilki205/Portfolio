@@ -16,7 +16,7 @@ function Footer() {
             © {new Date().getFullYear()} Wilkison Bruno
           </p>
           <span className="footer-subtext">
-            Desenvolvedor • Cloud • AWS Certified Cloud Practitioner
+            Desenvolvedor Full Stack Júnior • Back-End • Cloud • Segurança
           </span>
         </div>
 

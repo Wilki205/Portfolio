@@ -1,11 +1,11 @@
 function VideoCard() {
   const projectStats = [
-    '5 projetos publicados',
-    'Sistemas reais em gestão, educação, saúde e automação',
-    'Deploy próprio com domínio forged-apps.com',
+    'Projetos desenvolvidos e publicados',
+    'Sistemas em gestão, ponto, monitoramento e análise de dados',
+    'Ambientes de deploy com Docker, Linux e Cloud',
   ];
 
-  const stack = ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Supabase'];
+  const stack = ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'];
 
   return (
     <div className="glowing-card-wrapper static-card-wrapper color-green" data-aos="fade-up">

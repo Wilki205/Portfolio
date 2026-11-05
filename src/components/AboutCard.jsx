@@ -10,18 +10,19 @@ function AboutCard() {
         </header>
 
         <p className="card-text-content">
-          Sou estudante de Análise e Desenvolvimento de Sistemas, com conclusão
-          prevista para 2026, e atuo como Tutor de Programação no Projeto
-          Florescendo Talentos, da CESAR School.
+          Sou desenvolvedor de software com experiência prática na construção e
+          manutenção de aplicações web, APIs REST, integrações e bancos de
+          dados. Atualmente atuo como Desenvolvedor Júnior na PAD Saúde,
+          participando do desenvolvimento e evolução de soluções corporativas.
           <br /><br />
-          Minha experiência envolve ensino de lógica de programação, Python, HTML,
-          CSS, JavaScript, Google Sheets, Looker Studio e SQL, além do
-          acompanhamento de alunos, atividades, entregas e evolução pedagógica.
+          Tenho experiência com React, Next.js, Node.js, TypeScript, Python,
+          PostgreSQL e Docker, além de conhecimentos em infraestrutura, computação
+          em nuvem e segurança de aplicações.
           <br /><br />
-          Tenho direcionado minha formação e meus projetos para desenvolvimento
-          Back-End, dados, Cloud e Segurança da Informação, buscando construir
-          soluções organizadas, confiáveis e com impacto real para pessoas e
-          negócios.
+          Graduando em Análise e Desenvolvimento de Sistemas pela Faculdade
+          Católica Imaculada Conceição do Recife (previsão 2027), busco
+          desenvolver soluções eficientes, seguras e sustentáveis, unindo boas
+          práticas de engenharia a necessidades reais de negócio.
         </p>
       </section>
     </div>

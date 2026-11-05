@@ -12,77 +12,85 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 5 0 obj
-<< /Length 1957 >>
+<< /Length 2489 >>
 stream
 BT
-/F1 10 Tf
-50 810 Td
-13 TL
+/F1 9 Tf
+40 805 Td
+12 TL
 (Wilkison Bruno Barbosa de Souza) Tj
 T*
 (Recife-PE) Tj
 T*
 () Tj
 T*
-(Desenvolvedor em formacao | Back-End, Dados, Cloud e Seguranca da Informacao) Tj
+(Desenvolvedor Full Stack Junior | Back-End - Cloud - Seguranca) Tj
 T*
 () Tj
 T*
-(Resumo) Tj
+(Resumo Profissional) Tj
 T*
-(Estudante de Analise e Desenvolvimento de Sistemas, com conclusao prevista para 2026, e Tutor de Programacao no Projeto Florescendo Talentos - CESAR School.) Tj
+(Desenvolvedor de software com experiencia pratica na construcao e manutencao de aplicacoes web, APIs REST,) Tj
 T*
-(Experiencia pratica com desenvolvimento web, automacoes, bancos de dados, dashboards e acompanhamento pedagogico.) Tj
+(integracoes e bancos de dados. Atualmente atua como Desenvolvedor Junior na PAD Saude, participando do desenvolvimento) Tj
 T*
-(Desenvolve solucoes com React, Node.js, Python, Java, PostgreSQL, Docker, Supabase e AWS.) Tj
+(e evolucao de solucoes corporativas. Experiencia com React, Next.js, Node.js, TypeScript, Python, PostgreSQL e Docker,) Tj
 T*
-() Tj
-T*
-(Formacao) Tj
-T*
-(- Analise e Desenvolvimento de Sistemas - Faculdade Catolica Imaculada Conceicao do Recife - Em andamento, conclusao prevista para 2026) Tj
-T*
-(- CDD 4.0 - Formacao em Back-End - Instituto Alianca em parceria com a Universidade Federal do Ceara) Tj
+(alem de conhecimentos em infraestrutura, computacao em nuvem e seguranca de aplicacoes.) Tj
 T*
 () Tj
 T*
-(Experiencia) Tj
+(Experiencia Profissional) Tj
 T*
-(Tutor de Programacao - Projeto Florescendo Talentos - CESAR School) Tj
+(PAD Saude - Desenvolvedor Junior \(Agosto de 2026 - Atual\)) Tj
 T*
-(- Orientacao em logica de programacao, HTML, CSS, JavaScript e Python) Tj
+(- Atuacao no desenvolvimento, manutencao e evolucao de aplicacoes corporativas, APIs, integracoes e solucoes digitais.) Tj
 T*
-(- Apoio no acompanhamento de turmas, atividades, entregas e frequencia) Tj
+(CESAR School / Projeto Florescendo Talentos - Tutor de Programacao \(Experiencia anterior\)) Tj
 T*
-(- Uso de Google Sheets, Looker Studio, SQL e dashboards) Tj
+(- Atuacao no ensino de logica de programacao, HTML, CSS, JavaScript e fundamentos de desenvolvimento web.) Tj
 T*
-() Tj
+(Desenvolvedor Freelancer) Tj
 T*
-(Freelancer) Tj
-T*
-(- Desenvolvimento de projetos web pessoais, academicos e sob demanda) Tj
-T*
-(- Criacao de sistemas, dashboards, automacoes e APIs) Tj
+(- Desenvolvimento de aplicacoes web, dashboards, sistemas de gestao, automacao de processos e solucoes personalizadas.) Tj
 T*
 () Tj
 T*
-(Projetos principais) Tj
+(Formacao Academica e Certificacoes) Tj
 T*
-(- Syncro: https://syncro.forged-apps.com/) Tj
+(- Analise e Desenvolvimento de Sistemas - Faculdade Catolica Imaculada Conceicao do Recife \(FIC\) - Previsao 2027) Tj
 T*
-(- DentalCare: https://agenda.appdentalcare.com/login) Tj
+(- AWS Certified Cloud Practitioner - Certificacao obtida) Tj
 T*
-(- Portal Educacional: https://portal.forged-apps.com/) Tj
+(- AWS re/Start - Formacao em computacao em nuvem) Tj
 T*
-(- PhysiQ Pro: https://physiq.forged-apps.com/) Tj
-T*
-(- Monitor / API de Gestao: https://monitor.forged-apps.com/) Tj
+(- CDD 4.0 - Formacao em desenvolvimento Back-End com Python, Java e SQL) Tj
 T*
 () Tj
 T*
-(Tecnologias) Tj
+(Projetos) Tj
 T*
-(React, Vue.js, JavaScript, TypeScript, HTML, CSS, Node.js, Express, Python, Java, Spring Boot, PostgreSQL, MySQL, MongoDB, Supabase, SQL, Docker, AWS, Git, GitHub, JWT, Redis, Google Classroom API, Apps Script, Looker Studio.) Tj
+(- SYNCRO: Sistema digital de controle de ponto \(https://syncro.forged-apps.com/\)) Tj
+T*
+(- WFIGHT: Plataforma de gestao de treinos e acompanhamento fisico \(https://physiq.forged-apps.com/\)) Tj
+T*
+(- FORGED SENTINEL: Aplicacao desktop de monitoramento e automacao \(https://monitor.forged-apps.com/\)) Tj
+T*
+(- GENT Analytics: Dashboard interativo para analise de dados) Tj
+T*
+() Tj
+T*
+(Competencias Tecnicas) Tj
+T*
+(- Frontend: React, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS) Tj
+T*
+(- Backend: Node.js, Express, Python, Java, APIs REST) Tj
+T*
+(- Banco de dados: PostgreSQL, SQL, Prisma, Drizzle ORM) Tj
+T*
+(- Infraestrutura: Docker, Linux, Git, GitHub, AWS, Coolify) Tj
+T*
+(- Interesses: Seguranca de aplicacoes, OWASP Top 10, arquitetura de software, infraestrutura e cloud) Tj
 T*
 ET
 endstream
@@ -98,5 +106,5 @@ xref
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-2320
+2851
 %%EOF

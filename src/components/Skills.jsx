@@ -1,24 +1,28 @@
 import SkillIcon from './SkillIcon';
 
 const skillsData = [
-  { name: 'HTML5', iconClass: 'fa-brands fa-html5', delay: '0' },
-  { name: 'CSS3', iconClass: 'fa-brands fa-css3-alt', delay: '100' },
+  { name: 'React', iconClass: 'fa-brands fa-react', delay: '0' },
+  { name: 'Next.js', iconClass: 'fa-solid fa-code', delay: '100' },
   { name: 'JavaScript', iconClass: 'fa-brands fa-js', delay: '200' },
-  { name: 'React', iconClass: 'fa-brands fa-react', delay: '300' },
-  { name: 'Vue.js', iconClass: 'fa-brands fa-vuejs', delay: '400' },
-  { name: 'Java', iconClass: 'fa-brands fa-java', delay: '500' },
-  { name: 'Spring Boot', imgKey: 'spring', delay: '600' },
-  { name: 'Python', iconClass: 'fa-brands fa-python', delay: '700' },
-  { name: 'Node.js', iconClass: 'fa-brands fa-node-js', delay: '800' },
-  { name: 'SQL', iconClass: 'fa-solid fa-database', delay: '900' },
-  { name: 'MariaDB', imgKey: 'mariadb', delay: '1000' },
-  { name: 'AWS', imgKey: 'aws', delay: '1100' },
-  { name: 'Git', iconClass: 'fa-brands fa-git-alt', delay: '1200' },
-  { name: 'GitHub', iconClass: 'fa-brands fa-github', delay: '1300' },
-  { name: 'Kotlin', imgKey: 'kotlin', delay: '1400' },
-  { name: 'Flutter', imgKey: 'flutter', delay: '1500' },
-  { name: 'Firebase', iconClass: 'fa-brands fa-google', delay: '1600' },
-  { name: 'PHP', iconClass: 'fa-brands fa-php', delay: '1700' },
+  { name: 'TypeScript', iconClass: 'fa-solid fa-code', delay: '300' },
+  { name: 'HTML5', iconClass: 'fa-brands fa-html5', delay: '400' },
+  { name: 'CSS3', iconClass: 'fa-brands fa-css3-alt', delay: '500' },
+  { name: 'Tailwind CSS', iconClass: 'fa-solid fa-wind', delay: '600' },
+  { name: 'Node.js', iconClass: 'fa-brands fa-node-js', delay: '700' },
+  { name: 'Express', iconClass: 'fa-solid fa-server', delay: '800' },
+  { name: 'Python', iconClass: 'fa-brands fa-python', delay: '900' },
+  { name: 'Java', iconClass: 'fa-brands fa-java', delay: '1000' },
+  { name: 'APIs REST', iconClass: 'fa-solid fa-network-wired', delay: '1100' },
+  { name: 'PostgreSQL', iconClass: 'fa-solid fa-database', delay: '1200' },
+  { name: 'SQL', iconClass: 'fa-solid fa-table', delay: '1300' },
+  { name: 'Prisma', iconClass: 'fa-solid fa-gem', delay: '1400' },
+  { name: 'Drizzle ORM', iconClass: 'fa-solid fa-droplet', delay: '1500' },
+  { name: 'Docker', iconClass: 'fa-brands fa-docker', delay: '1600' },
+  { name: 'Linux', iconClass: 'fa-brands fa-linux', delay: '1700' },
+  { name: 'AWS', imgKey: 'aws', delay: '1800' },
+  { name: 'Coolify', iconClass: 'fa-solid fa-cloud-arrow-up', delay: '1900' },
+  { name: 'Git', iconClass: 'fa-brands fa-git-alt', delay: '2000' },
+  { name: 'GitHub', iconClass: 'fa-brands fa-github', delay: '2100' },
 ];
 
 function Skills() {
@@ -29,8 +33,9 @@ function Skills() {
       </h3>
 
       <p className="skills-description" data-aos="fade-up">
-        Tecnologias que fazem parte da minha trajetória em desenvolvimento web,
-        back-end, banco de dados e computação em nuvem.
+        Competências práticas em desenvolvimento Frontend, Backend, Bancos de Dados e
+        Infraestrutura Cloud. Interesses e estudos contínuos em segurança de aplicações
+        (OWASP Top 10) e arquitetura de software.
       </p>
 
       <div className="skills-frame" data-aos="fade-up">

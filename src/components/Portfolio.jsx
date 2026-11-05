@@ -2,77 +2,53 @@ import ProjectCard from './ProjectCard';
 
 const projectsData = [
   {
-    title: 'Syncro',
+    title: 'SYNCRO',
     imageSrc: '/projects/Syncro.png',
     liveUrl: 'https://syncro.forged-apps.com/',
     liveLabel: 'Acessar projeto',
-    type: 'Plataforma de gestão educacional',
+    type: 'Sistema digital de controle de ponto',
     description:
-      'Plataforma para acompanhamento de turmas, alunos, entregas, frequência e indicadores de desempenho em tempo real.',
-    stack: [
-      'React',
-      'Vue.js',
-      'Node.js',
-      'Supabase',
-      'PostgreSQL',
-      'Google Classroom API',
-      'Apps Script',
-    ],
+      'Sistema digital para gestão de ponto, controle de registros de frequência e relatórios operacionais.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
     highlight:
-      'Integra dados educacionais e transforma informações de entregas, presença e desempenho em indicadores visuais para tomada de decisão.',
-    status: 'Em desenvolvimento contínuo',
+      'Registro e controle digital de ponto com foco em integridade, rastreabilidade e simplicidade operacional.',
+    status: 'Online',
   },
   {
-    title: 'DentalCare',
-    imageSrc: '/projects/dentalcare.png',
-    liveUrl: 'https://agenda.appdentalcare.com/login',
-    liveLabel: 'Acessar sistema',
-    type: 'Sistema de gestão clínica',
-    description:
-      'Sistema para gerenciamento de pacientes, agenda, financeiro, autenticação e dashboard administrativo.',
-    stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'Docker'],
-    highlight:
-      'Aplicação full stack com autenticação, banco de dados relacional, rotas protegidas e painel administrativo.',
-    status: 'Em desenvolvimento contínuo',
-  },
-  {
-    title: 'Portal Educacional',
-    imageSrc: '/projects/portal-educacional.png',
-    liveUrl: 'https://portal.forged-apps.com/',
-    liveLabel: 'Acessar portal',
-    type: 'Portal web para ensino',
-    description:
-      'Portal próprio para gerenciar turmas, conteúdos, atividades, presença e participação dos alunos, com áreas separadas para professor e aluno.',
-    stack: ['React', 'Node.js', 'PostgreSQL', 'JWT', 'Docker'],
-    highlight:
-      'Centraliza fluxos educacionais em uma plataforma própria, reduzindo dependência de ferramentas externas.',
-    status: 'Em desenvolvimento contínuo',
-  },
-  {
-    title: 'PhysiQ Pro',
+    title: 'WFIGHT',
     imageSrc: '/projects/physiq-pro.png',
     liveUrl: 'https://physiq.forged-apps.com/',
-    liveLabel: 'Acessar sistema',
-    type: 'Plataforma de avaliação física',
+    liveLabel: 'Acessar projeto',
+    type: 'Plataforma de gestão de treinos e acompanhamento físico',
     description:
-      'Sistema para cadastro de alunos, avaliações físicas, evolução corporal, relatórios, agenda e dashboard para profissionais de educação física.',
-    stack: ['React', 'Node.js', 'API própria', 'PostgreSQL', 'Prisma', 'Docker'],
+      'Plataforma para gestão de treinos, avaliações físicas e acompanhamento contínuo da evolução corporal.',
+    stack: ['React', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker'],
     highlight:
-      'Produto com foco em gestão fitness, relatórios visuais e acompanhamento de evolução dos alunos.',
-    status: 'Em desenvolvimento contínuo',
+      'Estruturação de rotinas de treino, métricas de evolução e acompanhamento físico detalhado.',
+    status: 'Online',
   },
   {
-    title: 'API de Gestão',
+    title: 'FORGED SENTINEL',
     imageSrc: '/projects/api-gestao.png',
     liveUrl: 'https://monitor.forged-apps.com/',
     liveLabel: 'Acessar painel',
-    type: 'Back-End / API REST',
+    type: 'Aplicação desktop de monitoramento e automação',
     description:
-      'API para autenticação, gestão de usuários, unidades, permissões e controle operacional.',
-    stack: ['Node.js', 'Express', 'PostgreSQL', 'JWT', 'Prisma', 'Docker'],
+      'Aplicação desktop desenvolvida para monitoramento de sistemas, supervisão de integridade e automação de rotinas.',
+    stack: ['Python', 'Linux', 'Docker', 'APIs REST'],
     highlight:
-      'Back-end com autenticação, regras de acesso, endpoints organizados e estrutura preparada para integração com diferentes front-ends.',
-    status: 'Em desenvolvimento contínuo',
+      'Monitoramento contínuo de recursos e automação de fluxos operacionais com alta confiabilidade.',
+    status: 'Online',
+  },
+  {
+    title: 'GENT Analytics',
+    type: 'Dashboard interativo para análise de dados',
+    description:
+      'Dashboard interativo para consolidação de dados, acompanhamento de indicadores e suporte à tomada de decisão.',
+    stack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'SQL'],
+    highlight:
+      'Visualização interativa de indicadores analíticos com dados consolidados e estruturados.',
+    status: 'Em desenvolvimento',
   },
 ];
 
@@ -84,8 +60,7 @@ function Portfolio() {
       </h3>
 
       <p className="portfolio-description" data-aos="fade-up">
-        Sistemas e plataformas desenvolvidos para gestão, educação, saúde e
-        automação.
+        Projetos desenvolvidos com foco em controle de ponto, saúde, monitoramento e análise de dados.
       </p>
 
       <div className="projects-grid" data-aos="fade-up">

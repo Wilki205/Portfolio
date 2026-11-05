@@ -2,7 +2,7 @@ function TopInfoBar() {
   return (
     <div className="top-info-bar" data-aos="fade-down">
       <span className="designer-role">
-        Desenvolvedor em formação • Back-End • Dados • Cloud • Segurança
+        Desenvolvedor Full Stack Júnior • Back-End • Cloud • Segurança
       </span>
 
       <span className="location">
